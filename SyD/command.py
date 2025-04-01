@@ -2,7 +2,7 @@ from pyrogram import *
 from info import *
 import asyncio
 from Script import script
-from .database import *
+from .db import *
 import re
 from pyrogram.errors import FloodWait
 from pyrogram.types import *
@@ -14,13 +14,13 @@ async def strtCap(bot, message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("➕️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ➕️", url=f"https://t.me/AutoCaption_Robot?startchannel=true")
+                InlineKeyboardButton("⨭ Δᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇL ⨮", url=f"https://t.me/AutoCaption_Robot?startchannel=true")
             ],[
-                InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
-                InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
+                InlineKeyboardButton("✭ Hᴇʟᴘ", callback_data="help"),
+                InlineKeyboardButton("Aʙᴏᴜᴛ ✭", callback_data="about")
             ],[
-                InlineKeyboardButton("🌐 Uᴘᴅᴀᴛᴇ", url=f"https://t.me/Mrkillerdeveloper"),
-                InlineKeyboardButton("📜 Sᴜᴘᴘᴏʀᴛ", url=r"https://t.me/HP_Bot_discuss_group")
+                InlineKeyboardButton("⚝ Uᴘᴅᴀᴛᴇ", url=f"https://t.me/Bot_Cracker"),
+                InlineKeyboardButton("Mᴏᴠɪᴇ ⚝", url=r"https://t.me/Mod_Moviez_X")
         ]]
     )
     await message.reply_photo(
@@ -71,7 +71,7 @@ async def broadcast(bot, message):
 async def restart_bot(b, m):
     silicon = await b.send_message(text="**🔄 𝙿𝚁𝙾𝙲𝙴𝚂𝚂𝙴𝚂 𝚂𝚃𝙾𝙿𝙴𝙳. 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙸𝙽𝙶...**", chat_id=m.chat.id)       
     await asyncio.sleep(3)
-    await silicon.edit("**✅️ 𝙱𝙾𝚃 𝙸𝚂 𝚁𝙴𝚂𝚃𝙰𝚁𝚃𝙴𝙳. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
+    await silicon.edit("**✅️ ʙᴏᴛ ɪꜱ ʀᴇꜱᴛᴀʀᴛᴇᴅ. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 @Client.on_message(filters.command("set_cap") & filters.channel)
