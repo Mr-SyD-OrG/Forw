@@ -1,7 +1,7 @@
 import motor.motor_asyncio
 from info import *
 
-client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DB)
+client = motor.motor_asyncio.AsyncIOMotorClient(DB_URL)
 db = client.captions_with_chnl
 chnl_ids = db.chnl_ids
 users = db.users
