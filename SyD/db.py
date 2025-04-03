@@ -1,5 +1,5 @@
 import motor.motor_asyncio
-from info import *
+from config import *
 
 client = motor.motor_asyncio.AsyncIOMotorClient(DB_URL)
 db = client.captions_with_chnl
