@@ -19,12 +19,12 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 CLIENT = CLIENT()
 COMPLETED_BTN = InlineKeyboardMarkup(
    [
-      [InlineKeyboardButton('📢 Updates', url='https://t.me/Madflix_Bots')],
-      [InlineKeyboardButton('💬 Support', url='https://t.me/MadflixBots_Support')]
+      [InlineKeyboardButton('◈ Uᴩᴅᴀᴛᴇ ◈', url='https://t.me/Bot_Cracker')],
+      [InlineKeyboardButton('⦿ Sᴜᴩᴩᴏʀᴛ ⦿', url='https://t.me/Mod_Moviez_X')]
    ]
 )
 
-CANCEL_BTN = InlineKeyboardMarkup([[InlineKeyboardButton('✖️ Cancel ✖️', 'terminate_frwd')]])
+CANCEL_BTN = InlineKeyboardMarkup([[InlineKeyboardButton('✖️ Cᴀɴᴄᴇʟ ✖️', 'terminate_frwd')]])
 
 
 
