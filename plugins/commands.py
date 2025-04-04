@@ -34,9 +34,13 @@ main_buttons = [[
 @Client.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
     user = message.from_user
+    await message.reply("#")
     if not await db.is_user_exist(user.id):
+        await message.reply("#")
         await db.add_user(user.id, user.first_name)
+        await message.reply("#")
     reply_markup = InlineKeyboardMarkup(main_buttons)
+    await message.reply("#")
     jishubotz = await message.reply_sticker("CAACAgUAAxkBAAECEEBlLA-nYcsWmsNWgE8-xqIkriCWAgACJwEAAsiUZBTiPWKAkUSmmh4E")
     await asyncio.sleep(2)
     await jishubotz.delete()
