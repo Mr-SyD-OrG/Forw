@@ -11,35 +11,31 @@ import os
 from config import Config
 
 class Translation(object):
-  START_TXT = """Hey {}
+  START_TXT = """<b>Hᴇʏ {}
 
-➻ I Am A Advanced Auto Forward Bot
-  
-➻ I Can Forward All Message From One Channel To Another Channel 
-  
-➻ Click Help Button To Know More About Me
-  
-<b>Bot Is Made By @Madflix_Bots</b>"""
+➻ I Aᴍ Δ Aᴅᴠᴀɴᴄᴇᴅ Aᴜᴛᴏ Fᴏʀᴡᴀʀᴅ Bᴏᴛ.
+➻ I Cᴀɴ Fᴏʀᴡᴀʀᴅ Aʟʟ Mᴇꜱꜱᴀɢᴇꜱ Fʀᴏᴍ Cʜᴀɴɴᴇʟ To Aɴᴏᴛʜᴇʀ Cʜᴀɴɴᴇʟ 
+➻ Cʟɪᴄᴋ Hᴇʟᴩ To Kɴᴏᴡ Moʀᴇ Aʙᴏᴜᴛ Mᴇ</b>"""
 
 
-  HELP_TXT = """<b><u>🛠️ Help</b></u>
+  HELP_TXT = """<b><u>⋈ Hᴇʟᴩ</b></u>
 
-<b><u>📚 Available Commands :</u></b>
-⏣ __/start - Check I'm Alive__ 
-⏣ __/forward - Forward Messages__
-⏣ __/unequify - Delete Duplicate Messages In Channels__
-⏣ __/settings - Configure Your Settings__
-⏣ __/reset - Reset Your Settings__
+<b><u>≍ Aᴠᴀɪʟᴀʙʟᴇ Cᴏᴍᴍᴀɴᴅꜱ :</u></b>
+⏣ __/start - Cʜᴇᴄᴋ I'ᴍ Aʟɪᴠᴇ__ 
+⏣ __/forward - Fᴏʀᴡᴀʀᴅ Mᴇꜱꜱᴀɢᴇꜱ__
+⏣ __/unequify - Dᴇʟᴇᴛᴇ Dᴜᴩʟɪᴄᴀᴛᴇ Mᴇꜱꜱᴀɢᴇꜱ Iɴ Cʜᴀɴɴᴇʟꜱ__
+⏣ __/settings - Cᴏɴꜰɪɢᴜʀᴇ Yᴏᴜʀ Sᴇᴛᴛɪɴɢꜱ__
+⏣ __/reset - Rᴇꜱᴇᴛ Yᴏᴜʀ Sᴇᴛᴛɪɴɢꜱ__
 
-<b><u>💢 Features :</b></u>
-► __Forward Message From Public Channel To Your Channel Without Admin Permission. If The Channel Is Private Need Admin Permission__
-► __Forward Message From Private Channel To Your Channel By Using Userbot(User Must Be Member In There)__
-► __Custom Caption__
-► __Custom Button__
-► __Support Restricted Chats__
-► __Skip Duplicate Messages__
-► __Filter Type Of Messages__
-► __Skip Messages Based On Extensions & Keywords & Size__
+<b><u>≬≬ Fᴇᴀᴛᴜʀᴇꜱ :</b></u>
+► __Fᴏʀᴡᴀʀᴅ Mᴇꜱꜱᴀɢᴇ Fʀᴏᴍ Pᴜʙʟɪᴄ Cʜᴀɴɴᴇʟ To Yᴏᴜʀ Cʜᴀɴɴᴇʟ Wɪᴛʜᴏᴜᴛ Aᴅᴍɪɴ Peᴇʀᴍɪꜱꜱɪᴏɴ. Iꜰ Tʜᴇ Cʜᴀɴɴᴇʟ Iꜱ Pʀɪᴠᴀᴛᴇ Nᴇᴇᴅ Aᴅᴍɪɴ Pᴇʀᴍɪꜱꜱɪᴏɴ, Bᴇᴛᴇʀ Tᴏ Uꜱᴇ UꜱᴇʀBᴏᴛ__
+► __Forward Message Fʀᴏᴍ Private Cʜᴀɴɴᴇʟ To Yᴏᴜʀ Cʜᴀɴɴᴇʟ Bʏ Uꜱɪɴɢ UꜱᴇʀBᴏᴛ (Uꜱᴇʀ Mᴜꜱᴛ Bᴇ Mᴇᴍʙᴇʀ Iɴ Tʜᴇʀᴇ)__
+► __Cᴜꜱᴛᴏᴍ Cᴀᴩᴛɪᴏɴ__
+► __Cᴜꜱᴛᴏᴍ Bᴜᴛᴛᴏɴ__
+► __Sᴜᴩᴩᴏʀᴛ Rᴇꜱᴛʀɪᴄᴛᴇᴅ Cʜᴀᴛꜱ__
+► __Sᴋɪᴩ Dᴜᴩʟɪᴄᴀᴛᴇ Mᴇꜱꜱᴀɢᴇꜱ__
+► __Fɪʟᴛᴇʀ Tʏᴩᴇ Oꜰ Mᴇꜱꜱᴀɢᴇꜱ__
+► __Sᴋɪᴩ Mᴇꜱꜱᴀɢᴇꜱ Bᴀꜱᴇᴅ Oɴ Exᴛᴇɴꜱɪᴏɴꜱ & Kᴇʏᴡᴏʀᴅ & Sɪᴢᴇ__
 """
   
   HOW_USE_TXT = """<b><u>⚠️ Before Forwarding :</b></u>
@@ -50,22 +46,18 @@ class Translation(object):
 ► __If The **From Channel** Is Private Your Userbot Must Be Member In There Or Your Bot Must Need Admin Permission In There Also__
 ► __Then Use /forward To Forward Messages__"""
   
-  ABOUT_TXT = """<b>🤖 My Name :</b> {}
-<b>📝 Language :</b> <a href='https://python.org'>Python 3</a>
-<b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram 2.0</a>
-<b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a>
-<b>📢 Channel :</b> <a href='https://t.me/Madflix_Bots'>Madflix Botz</a>
-<b>🧑‍💻 Developer :</b> <a href='https://t.me/CallAdminRobot'>Jishu Developer</a>
-
-<b>♻️ Bot Made By :</b> @Madflix_Bots"""
+  ABOUT_TXT = """<b>⋉ Mʏ Nᴀᴍᴇ :</b> {}
+<b>⋉ Lᴀɴɢᴜᴀɢᴇ :</b> <a href='https://t.me/+0Zi1FC4ulo8zYzVl'>Sᴀᴍᴇ ᴀꜱ!</a>
+<b>⋉ Lɪʙʀᴀʀʏ :</b> <a href='https://t.me/nt_Backup'>Bᴀᴄᴋ-Uᴩ 🕯️</a>
+<b>⋉ Sᴇʀᴠᴇʀ :</b> <a href='https://t.me/+7P5-bLWSuPA5NmFl'>TG 🪄</a>
+<b>⋉ Cʜᴀɴɴᴇʟ :</b> <a href='https://t.me/Bot_Cracker'>Bᴏᴛ Cʀᴀᴄᴋᴇʀ 🎶</a>
+<b>⋉ Dᴇᴠᴇʟᴏᴩᴇʀ :</b> <a href='https://t.me/Syd_XyZ'>Jishu Developer</a>"""
   
-  STATUS_TXT = """<b><u>Bot Status</u></b>
+  STATUS_TXT = """<b><u>Bᴏᴛ Sᴛᴀᴛᴜꜱ:</u></b>
   
-<b>👱 Total Users :</b> <code>{}</code>
-
-<b>🤖 Total Bots :</b> <code>{}</code>
-
-<b>🔃 Forwardings :</b> <code>{}</code>
+<b>🎧 Tᴏᴛᴀʟ Uꜱᴇʀꜱ :</b> <code>{}</code>
+<b>⚝ Tᴏᴛᴀʟ Bᴏᴛꜱ :</b> <code>{}</code>
+<b>❉ Fᴏʀᴡᴀʀᴅɪɴɢ :</b> <code>{}</code>
 """
   
   FROM_MSG = "<b><u>Set Source Chat</></>\n\nForward The Last Message Or Last Message Link Of Source Chat.\n/cancel - To Cancel This Process"
@@ -75,45 +67,30 @@ class Translation(object):
   BOT_DETAILS = "<b><u>📄 Bot Details</u></b>\n\n<b>➣ Name :</b> <code>{}</code>\n<b>➣ Bot ID :</b> <code>{}</code>\n<b>➣ Username :</b> @{}"
   USER_DETAILS = "<b><u>📄 UserBot Details</u></b>\n\n<b>➣ Name :</b> <code>{}</code>\n<b>➣ User ID :</b> <code>{}</code>\n<b>➣ Username :</b> @{}"  
          
-  TEXT = """<b><u>Forward Status</u></b>
+  TEXT = """<b><u>Fᴏʀᴡᴀʀᴅ Sᴛᴀᴛᴜꜱ</u></b>
   
-<b>🕵 Fetch Message :</b> <code>{}</code>
-
-<b>✅ Successfully Forward :</b> <code>{}</code>
-
-<b>👥 Dublicate Message :</b> <code>{}</code>
-
-<b>🗑 Deleted Message :</b> <code>{}</code>
-
-<b>🪆 Skipped Message :</b> <code>{}</code>
-
-<b>🔁 Filtered Message :</b> <code>{}</code>
-
-<b>📊 Current Status :</b> <code>{}</code>
-
-<b>🔥 Percentage :</b> <code>{}</code> %
+<b>🕵 Fᴇᴛᴄʜᴇᴅ Mᴇꜱꜱᴀɢᴇ :</b> <code>{}</code>
+<b>✅ Sᴜᴄᴄᴇꜱꜰᴜʟʟʏ Fᴏʀᴡᴀʀᴅ :</b> <code>{}</code>
+<b>👥 Dᴜʙʟɪᴄᴀᴛᴇ Mᴇꜱꜱᴀɢᴇ :</b> <code>{}</code>
+<b>🗑 Dᴇʟᴇᴛᴇᴅ Mᴇꜱꜱᴀɢᴇ :</b> <code>{}</code>
+<b>🪆 Sᴋɪᴩᴩᴇᴅ Mᴇꜱꜱᴀɢᴇ :</b> <code>{}</code>
+<b>🔁 Fɪʟᴛᴇʀᴇᴅ Mᴇꜱꜱᴀɢᴇ :</b> <code>{}</code>
+<b>📊 Cᴜʀʀᴇɴᴛ Sᴛᴀᴛᴜꜱ :</b> <code>{}</code>
+<b>🔥 Pᴇʀᴄᴇɴᴛᴀɢᴇ :</b> <code>{}</code> %
 
 {}
 """
 
-  TEXT1 = """<b><u>Forwarded Status</u></b>
+  TEXT1 = """<b><u>Fᴏʀᴡᴀʀᴅ Sᴛᴀᴛᴜꜱ</u></b>
 
-<b>🕵 Fetched Message :</b> <code>{}</code>
-
-<b>✅ Successfully Forward :</b> <code>{}</code>
-
-<b>👥 Dublicate Message :</b> <code>{}</code>
-
-<b>🗑 Deleted Message :</b> <code>{}</code>
-
-<b>🪆 Skipped :</b> <code>{}</code>
-
-<b>📊 Stats :</b> <code>{}</code>
-
-<b>⏳ Progress :</b> <code>{}</code>
-
-<b>⏰ ETA :</b> <code>{}</code>
-
+<b>🕵 Fᴇᴛᴄʜᴇᴅ Mᴇꜱꜱᴀɢᴇ :</b> <code>{}</code>
+<b>✅ Sᴜᴄᴄᴇꜱꜰᴜʟʟʏ Fᴏʀᴡᴀʀᴅ :</b> <code>{}</code>
+<b>👥 Dᴜʙʟɪᴄᴀᴛᴇ Mᴇꜱꜱᴀɢᴇ :</b> <code>{}</code>
+<b>🗑 Dᴇʟᴇᴛᴇᴅ Mᴇꜱꜱᴀɢᴇ :</b> <code>{}</code>
+<b>🪆 Sᴋɪᴩᴩᴇᴅ Mᴇꜱꜱᴀɢᴇ :</b> <code>{}</code>
+<b>📊 Sᴛᴀᴛꜱ :</b> <code>{}</code>
+<b>⏳ Pʀᴏɢʀᴇꜱꜱ :</b> <code>{}</code>
+<b>⏰ Eᴛᴀ :</b> <code>{}</code>
 {}"""
 
   DUPLICATE_TEXT = """<b><u>Unequify Status</u></b>
