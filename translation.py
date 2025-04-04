@@ -60,12 +60,12 @@ class Translation(object):
 <b>❉ Fᴏʀᴡᴀʀᴅɪɴɢ :</b> <code>{}</code>
 """
   
-  FROM_MSG = "<b><u>Set Source Chat</></>\n\nForward The Last Message Or Last Message Link Of Source Chat.\n/cancel - To Cancel This Process"
-  TO_MSG = "<b><u>Choose Target Chat</u></b>\n\nChoose Your Target Chat From The Given Buttons.\n/cancel - To Cancel This Process"
-  SKIP_MSG = "<b><u>Set Message Skiping Number</u></b>\n\nSkip The Message As Much As You Enter The Number And The Rest Of The Message Will Be Forwarded\nDefault Skip Number = <code>0</code>\n<code>eg: You Enter 0 = 0 Message Skiped\nYou Enter 5 = 5 Message Skiped</code>\nSᴇɴᴅ Zᴇʀᴏ(0) Tᴏ Aᴠᴏɪᴅ Sᴋɪᴩᴩɪɴɢ\n/cancel - To Cancel This Process"
-  CANCEL = "Process Cancelled Succefully !"
-  BOT_DETAILS = "<b><u>📄 Bot Details</u></b>\n\n<b>➣ Name :</b> <code>{}</code>\n<b>➣ Bot ID :</b> <code>{}</code>\n<b>➣ Username :</b> @{}"
-  USER_DETAILS = "<b><u>📄 UserBot Details</u></b>\n\n<b>➣ Name :</b> <code>{}</code>\n<b>➣ User ID :</b> <code>{}</code>\n<b>➣ Username :</b> @{}"  
+  FROM_MSG = "<b><u>Sᴇᴛ Sᴏᴜʀᴄᴇ Cʜᴀᴛ</></>\n\nForward The Last Mᴇꜱꜱᴀɢᴇ Or Last Mᴇꜱꜱᴀɢᴇ Lɪɴᴋ Oꜰ Sᴏᴜʀᴄᴇ Cʜᴀᴛ.\n/cancel - Tᴏ Cᴀɴᴄᴇʟ Tʜɪꜱ Pʀᴏᴄᴇꜱꜱ"
+  TO_MSG = "<b><u>Cʜᴏᴏꜱᴇ Tᴀʀɢᴇᴛ Cʜᴀᴛ</u></b>\n\nCʜᴏᴏꜱᴇ Yᴏᴜʀ Tᴀʀɢᴇᴛ Cʜᴀᴛ Fʀᴏᴍ Tʜᴇ Gɪᴠᴇɴ Bᴜᴛᴛᴏɴꜱ.\n/cancel - Tᴏ Cᴀɴᴄᴇʟ Tʜɪꜱ Pʀᴏᴄᴇꜱꜱ"
+  SKIP_MSG = "<b><u>Sᴇᴛ Mᴇꜱꜱᴀɢᴇ Sᴋɪᴩᴩɪɴɢ Nᴜᴍʙᴇʀ</u></b>\n\nSᴋɪᴩ Tʜᴇ Mᴇꜱꜱᴀɢᴇ Aꜱ Mᴜᴄʜ Aꜱ Yᴏᴜ Eɴᴛᴇʀ Tʜᴇ Nᴜᴍʙᴇʀ Aɴᴅ Tʜᴇ Rᴇꜱᴛ Oꜰ Tʜᴇ Mᴇꜱꜱᴀɢᴇ Wɪʟʟ Bᴇ Fᴏʀᴡᴀʀᴅ\nDᴇꜰᴀᴜʟᴛ Sᴋɪᴩ Nᴜᴍʙᴇʀ = <code>0</code>\n<code>eg: Iꜰ Yᴏᴜ Eɴᴛᴇʀ 0, 0 Mᴇꜱꜱᴀɢᴇ Sᴋɪᴩᴩᴇᴅ\nYᴏᴜ Eɴᴛᴇʀ 5 = 5 Mᴇꜱꜱᴀɢᴇ Sᴋɪᴩᴩᴇᴅ</code>\nSᴇɴᴅ Zᴇʀᴏ(0) Tᴏ Aᴠᴏɪᴅ Sᴋɪᴩᴩɪɴɢ\n/cancel - Tᴏ Cᴀɴᴄᴇʟ Tʜɪꜱ Pʀᴏᴄᴇꜱꜱ"
+  CANCEL = "Pʀᴏᴄᴇꜱꜱ Cᴀɴᴄᴇʟʟᴇᴅ Sᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ !"
+  BOT_DETAILS = "<b><u>📄 Bᴏᴛ Dᴇᴛᴀɪʟꜱ</u></b>\n\n<b>➣ Nᴀᴍᴇ :</b> <code>{}</code>\n<b>➣ Bᴏᴛ ID :</b> <code>{}</code>\n<b>➣ Uꜱᴇʀɴᴀᴍᴇ :</b> @{}"
+  USER_DETAILS = "<b><u>📄 UꜱᴇʀBᴏᴛ Dᴇᴛᴀɪʟꜱ</u></b>\n\n<b>➣ Nᴀᴍᴇ :</b> <code>{}</code>\n<b>➣ Uꜱᴇʀ ID :</b> <code>{}</code>\n<b>➣ Uꜱᴇʀɴᴀᴍᴇ :</b> @{}"  
          
   TEXT = """<b><u>Fᴏʀᴡᴀʀᴅ Sᴛᴀᴛᴜꜱ</u></b>
   
@@ -93,27 +93,27 @@ class Translation(object):
 <b>⏰ Eᴛᴀ :</b> <code>{}</code>
 {}"""
 
-  DUPLICATE_TEXT = """<b><u>Unequify Status</u></b>
+  DUPLICATE_TEXT = """<b><u>UɴᴇQᴜɪꜰʏ Sᴛᴀᴛᴜꜱ</u></b>
 
-<b>🕵 Fetched Files :</b> <code>{}</code>
+<b>🕵 Fᴇᴛᴄʜᴇᴅ Fɪʟᴇꜱ :</b> <code>{}</code>
 
-<b>👥 Dublicate Deleted :</b> <code>{}</code>
+<b>👥 Dᴜʙʟɪᴄᴀᴛᴇ Dᴇʟᴇᴛᴇᴅ :</b> <code>{}</code>
 
 {}
 """
-  DOUBLE_CHECK = """<b><u>Double Checking</u></b>
+  DOUBLE_CHECK = """<b><u>Dᴏᴜʙʟᴇ Cʜᴇᴄᴋɪɴɢ</u></b>
   
-Before Forwarding The Messages Click The Yes Button Only After Checking The Following
+Bᴇꜰᴏʀ Fᴏʀᴡᴀʀᴅɪɴɢ Tʜᴇ Mᴇꜱꜱᴀɢᴇꜱ Cʟɪᴄᴋ Tʜᴇ Yᴇꜱ Bᴜᴛᴛᴏɴ Oɴʟʏ Aꜰᴛᴇʀ Cʜᴇᴄᴋɪɴɢ Tʜᴇ Fᴏʟʟᴏᴡɪɴɢ
 
-<b>★ Your Bot :</b> [{botname}](t.me/{botuname})
-<b>★ From Channel :</b> <code>{from_chat}<>
-<b>★ To Channel :</b> <code>{to_chat}</code>
-<b>★ Skip Messages :</b> <code>{skip}</code>
+<b>★ Yᴏᴜʀ Bᴏᴛ :</b> [{botname}](t.me/{botuname})
+<b>★ Fʀᴏᴍ Cʜᴀɴɴᴇʟ :</b> <code>{from_chat}<>
+<b>★ Tᴏ Cʜᴀɴɴᴇʟ :</b> <code>{to_chat}</code>
+<b>★ Sᴋɪᴩ Mᴇꜱꜱᴀɢᴇꜱ :</b> <code>{skip}</code>
 
-<i>° [{botname}](t.me/{botuname}) Must Be Admin In <b>Target Chat</b></i> (<code>{to_chat}</code>)
-<i>° If The <b>Source Chat</b> Is Private Your Userbot Must Be Member Or Your Bot Must Be Admin In There Also</i>
+<i>° [{botname}](t.me/{botuname}) Mᴜꜱᴛ Bᴇ Aᴅᴍɪɴ Iɴ <b>Tᴀʀɢᴇᴛ Cʜᴀᴛ</b></i> (<code>{to_chat}</code>)
+<i>° Iꜰ Tʜᴇ <b>Sᴏᴜʀᴄᴇ Cʜᴀᴛ</b> Iꜱ Pʀɪᴠᴀᴛᴇ Yᴏᴜʀ Userbot Mᴜꜱᴛ Bᴇ Mᴇᴍʙᴇʀ Or Yᴏᴜʀ Bᴏᴛ Mᴜꜱᴛ Bᴇ Aᴅᴍɪɴ Iɴ Tʜᴇʀᴇ Aʟꜱᴏ</i>
 
-<b>If The Above Is Checked Then The Yes Button Can Be Clicked</b>"""
+<b>If Tʜᴇ Above Iꜱ Cʜᴇᴄᴋᴇᴅ Tʜᴇɴ Tʜᴇ Yᴇꜱ Bᴜᴛᴛᴏɴ Cᴀɴ Bᴇ Cʟɪᴄᴋᴇᴅ</b>"""
 
 
 
