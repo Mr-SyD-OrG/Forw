@@ -45,6 +45,7 @@ async def start(client, message):
     syd = await message.reply_sticker("CAACAgUAAxkBAAKlPWfvngykYJT-Q_3zzGyfqePnnQXXAAI3GAACF22BV0gDVTTEeAZaNgQ")
     await asyncio.sleep(2)
     await syd.delete()
+    await client.send_photo(chat_id=user.id, photo="https://envs.sh/jyR.jpg")
     text=Translation.START_TXT.format(user.mention)
     await message.reply_text(
         text=text,
