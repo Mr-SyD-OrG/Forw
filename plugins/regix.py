@@ -210,11 +210,11 @@ async def edit(msg, title, status, sts):
    text = TEXT.format(i.fetched, i.total_files, i.duplicate, i.deleted, i.skip, status, percentage, estimated_total_time, progress)
    if status in ["cancelled", "completed"]:
       button.append(
-         [InlineKeyboardButton('📢 Updates', url='https://t.me/Madflix_Bots'),
-         InlineKeyboardButton('💬 Support', url='https://t.me/MadflixBots_Support')]
+         [InlineKeyboardButton('◈ Uᴩᴅᴀᴛᴇ ◈', url='https://t.me/Bot_Cracker'),
+         InlineKeyboardButton('⦿ Sᴜᴩᴩᴏʀᴛ ⦿', url='https://t.me/Mod_Moviez_X')]
          )
    else:
-      button.append([InlineKeyboardButton('✖️ Cancel ✖️', 'terminate_frwd')])
+      button.append([InlineKeyboardButton('✖️ Cᴀɴᴄᴇʟ ✖️', 'terminate_frwd')])
    await msg_edit(msg, text, InlineKeyboardMarkup(button))
    
 async def is_cancelled(client, user, msg, sts):
@@ -285,7 +285,7 @@ def TimeFormatter(milliseconds: int) -> str:
     return tmp[:-2]
 
 def retry_btn(id):
-    return InlineKeyboardMarkup([[InlineKeyboardButton('♻️ Retry ♻️', f"start_public_{id}")]])
+    return InlineKeyboardMarkup([[InlineKeyboardButton('♻️ Rᴇᴛʀʏ ♻️', f"start_public_{id}")]])
 
 
 
