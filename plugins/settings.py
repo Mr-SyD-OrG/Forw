@@ -64,7 +64,7 @@ async def settings_query(bot, query):
      bot = await CLIENT.add_bot(bot, query)
      if bot != True: return
      await query.message.reply_text(
-        "<b>Bot Token Successfully Added To Database</b>",
+        "<b>Bᴏᴛ Tᴏᴋᴇɴ Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Aᴅᴅᴇᴅ Tᴏ Dᴀᴛᴀʙᴀꜱᴇ</b>",
         reply_markup=InlineKeyboardMarkup(buttons))
   
   elif type=="adduserbot":
@@ -72,7 +72,7 @@ async def settings_query(bot, query):
      user = await CLIENT.add_session(bot, query)
      if user != True: return
      await query.message.reply_text(
-        "<b>Session Successfully Added To Database</b>",
+        "<b>Session Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Added To Database</b>",
         reply_markup=InlineKeyboardMarkup(buttons))
       
   elif type=="channels":
@@ -110,7 +110,7 @@ async def settings_query(bot, query):
          chat = await db.add_channel(user_id, chat_id, title, username)
          await chat_ids.delete()
          await text.edit_text(
-            "Successfully Updated" if chat else "This Channel Already Added",
+            "Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Updated" if chat else "This Channel Already Added",
             reply_markup=InlineKeyboardMarkup(buttons))
      except asyncio.exceptions.TimeoutError:
          await text.edit_text('Process Has Been Automatically Cancelled', reply_markup=InlineKeyboardMarkup(buttons))
@@ -168,7 +168,7 @@ async def settings_query(bot, query):
                                
   elif type=="seecaption":   
      data = await get_configs(user_id)
-     buttons = [[InlineKeyboardButton('✏️ Edit Caption', 
+     buttons = [[InlineKeyboardButton('✏️ Eᴅɪᴛ Cᴀᴩᴛɪᴏɴ', 
                   callback_data="settings#addcaption")
                ],[
                InlineKeyboardButton('⇇ Bᴀᴄᴋ', 
@@ -212,17 +212,17 @@ async def settings_query(bot, query):
      buttons = []
      button = (await get_configs(user_id))['button']
      if button is None:
-        buttons.append([InlineKeyboardButton('✚ Add Button ✚', 
+        buttons.append([InlineKeyboardButton('✚ Aᴅᴅ Bᴜᴛᴛᴏɴ ✚', 
                       callback_data="settings#addbutton")])
      else:
-        buttons.append([InlineKeyboardButton('👀 See Button', 
+        buttons.append([InlineKeyboardButton('👀 Sᴇᴇ Bᴜᴛᴛᴏɴ', 
                       callback_data="settings#seebutton")])
-        buttons[-1].append(InlineKeyboardButton('🗑️ Remove Button ', 
+        buttons[-1].append(InlineKeyboardButton('🗑️ Rᴇᴍᴏᴠᴇ Bᴜᴛᴛᴏɴ ', 
                       callback_data="settings#deletebutton"))
      buttons.append([InlineKeyboardButton('⇇ Bᴀᴄᴋ', 
                       callback_data="settings#main")])
      await query.message.edit_text(
-        "<b><u>Custom Button</b></u>\n\nYou Can Set A Inline Button To Messages.\n\n<b><u>Format :</b></u>\n`[Madflix Botz][buttonurl:https://t.me/Madflix_Bots]`\n",
+        "<b><u>Custom Button</b></u>\n\nYou Can Set A Inline Bᴜᴛᴛᴏɴ To Messages.\n\n<b><u>Format :</b></u>\n`[MadBotz][buttonurl:https://t.me/Madfx_Bots]`\n",
         reply_markup=InlineKeyboardMarkup(buttons))
   
   elif type=="addbutton":
