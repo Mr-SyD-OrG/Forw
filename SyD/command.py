@@ -162,17 +162,17 @@ async def start(bot, query):
         text=script.START_TXT.format(query.from_user.mention),  
         reply_markup=InlineKeyboardMarkup(
             [[
-                InlineKeyboardButton("➕️ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ➕️", url=f"http://t.me/AutoCaption_Robot?startchannel=true")
-                ],[
-                InlineKeyboardButton("Hᴇʟᴘ", callback_data="help"),
-                InlineKeyboardButton("Aʙᴏᴜᴛ", callback_data="about")
+                InlineKeyboardButton("⨭ Δᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇL ⨮", url=f"https://t.me/AutoCaption_Robot?startchannel=true")
             ],[
-                InlineKeyboardButton("🌐 Uᴘᴅᴀᴛᴇ", url=f"https://t.me/Mrkillerdeveloper"),
-                InlineKeyboardButton("📜 Sᴜᴘᴘᴏʀᴛ", url=r"https://t.me/HP_Bot_ss_group")
-            ]]
+                InlineKeyboardButton("✭ Hᴇʟᴘ", callback_data="help"),
+                InlineKeyboardButton("Aʙᴏᴜᴛ ✭", callback_data="about")
+            ],[
+                InlineKeyboardButton("⚝ Uᴘᴅᴀᴛᴇ", url=f"https://t.me/Bot_Cracker"),
+                InlineKeyboardButton("Mᴏᴠɪᴇ ⚝", url=r"https://t.me/Mod_Moviez_X")
+           ]]
         ),
         disable_web_page_preview=True
-)
+    )
 
 @Client.on_callback_query(filters.regex(r'^help'))
 async def help(bot, query):
