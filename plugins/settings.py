@@ -21,7 +21,7 @@ CLIENT = CLIENT()
 
 @Client.on_message(filters.private & filters.command(['settings']))
 async def settings(client, message):
-    text="<b>Change Your Settings As Your Wish</b>"
+    text="<b>Cʜᴀɴɢᴇ Yᴏᴜʀ Sᴇᴛᴛɪɴɢꜱ Aꜱ Pᴇʀ Yᴏᴜʀ Nᴇᴇᴅꜱ ❄️</b>"
     await message.reply_text(
         text=text,
         reply_markup=main_buttons(),
