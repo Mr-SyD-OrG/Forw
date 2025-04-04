@@ -34,12 +34,10 @@ main_buttons = [[
 @Client.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
     user = message.from_user
-    await message.reply("#")
     try:
         if not await db.is_user_exist(user.id):
             await message.reply("#")
             await db.add_user(user.id, user.first_name)
-            await message.reply("#")
     except Exception as e:
         await message.reply(f"⚠️ An error occurred while checking or adding the user. {e}")
         logger.error(f"Error in user registration: {e}")
