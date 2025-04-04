@@ -11,6 +11,10 @@ from config import Config
 import motor.motor_asyncio
 from pymongo import MongoClient
 
+
+DB_NAME = Config.DB_NAME
+DB_URL = Config.DB_URL
+
 async def mongodb_version():
     x = MongoClient(Config.DB_URL)
     mongodb_version = x.server_info()['version']
@@ -176,7 +180,7 @@ class Database:
     async def get_all_frwd(self):
        return self.nfy.find({})
      
-db = Database(Config.DB_URL, Config.DB_NAME)
+db = Database(DB_URL, DB_NAME)
 
 
 
