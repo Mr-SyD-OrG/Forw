@@ -14,7 +14,7 @@ async def clone_menu(client, message):
     syd = Client(
         f"{mrsyd}", API_ID, API_HASH,
         bot_token=mrsyd,
-        plugins={"root": "Syd"}
+        plugins={"root": "SyD"}
     )
     await syd.start()
     await message.reply_text("✅")
