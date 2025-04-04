@@ -24,7 +24,7 @@ COMPLETED_BTN = InlineKeyboardMarkup(
    ]
 )
 
-CANCEL_BTN = InlineKeyboardMarkup([[InlineKeyboardButton('✖️ Cᴀɴᴄᴇʟ ✖️', 'terminate_frwd')]])
+CANCEL_BTN = InlineKeyboardMarkup([[InlineKeyboardButton('⛒ Cᴀɴᴄᴇʟ ⛒', 'terminate_frwd')]])
 
 
 
@@ -35,10 +35,10 @@ async def unequify(client, message):
    user_id = message.from_user.id
    temp.CANCEL[user_id] = False
    if temp.lock.get(user_id) and str(temp.lock.get(user_id))=="True":
-      return await message.reply("Please Wait Until Previous Task Complete")
+      return await message.reply("Pʟᴇᴀꜱᴇ Wᴀɪᴛ Uɴᴛɪʟ Pʀᴇᴠɪᴏᴜꜱ Tᴀꜱᴋ Iꜱ Cᴏᴍᴩʟᴇᴛᴇᴅ")
    _bot = await db.get_bot(user_id)
    if not _bot or _bot['is_bot']:
-      return await message.reply("Need Userbot To Fo This Process. Please Add A Userbot Using /settings")
+      return await message.reply("Nᴇᴇᴅ UꜱᴇʀBᴏᴛ To Foʀ Tʜɪꜱ Pʀᴏᴄᴇꜱꜱ. Pʟᴇᴀꜱᴇ Aᴅᴅ A UꜱᴇʀBᴏᴛ Uꜱɪɴɢ /settings")
    target = await client.ask(user_id, text="Forward The Last Message From Target Chat Or Send Last Message Link.\n/cancel - To Cancel This Process")
    if target.text.startswith("/"):
       return await message.reply("Process Cancelled !")
@@ -46,7 +46,7 @@ async def unequify(client, message):
       regex = re.compile(r"(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")
       match = regex.match(target.text.replace("?single", ""))
       if not match:
-         return await message.reply('Invalid Link')
+         return await message.reply('Iɴᴠᴀʟɪᴅ Lɪɴᴋ !')
       chat_id = match.group(4)
       last_msg_id = int(match.group(5))
       if chat_id.isnumeric():
@@ -55,17 +55,17 @@ async def unequify(client, message):
         last_msg_id = target.forward_from_message_id
         chat_id = target.forward_from_chat.username or target.forward_from_chat.id
    else:
-        return await message.reply_text("Invalid !")
-   confirm = await client.ask(user_id, text="Send /yes To Start The Process And /no To Cancel This Process")
+        return await message.reply_text("Iɴᴠᴀʟɪᴅ !")
+   confirm = await client.ask(user_id, text="Sᴇɴᴅ /yes To Sᴛᴀʀᴛ Tʜᴇ Pʀᴏᴄᴇꜱꜱ Aɴᴅ /no To Cᴀɴᴄᴇʟ Tʜɪꜱ Pʀᴏᴄᴇꜱꜱ!")
    if confirm.text.lower() == '/no':
-      return await confirm.reply("Process Cancelled !")
-   sts = await confirm.reply("Processing..")
+      return await confirm.reply("Pʀᴏᴄᴇꜱꜱ Cᴀɴᴄᴇʟʟᴇᴅ !")
+   sts = await confirm.reply("Pʀᴏᴄᴇꜱꜱɪɴɢ...")
    try:
       bot = await start_clone_bot(CLIENT.client(_bot))
    except Exception as e:
       return await sts.edit(e)
    try:
-       k = await bot.send_message(chat_id, text="testing")
+       k = await bot.send_message(chat_id, text="Tᴇꜱᴛɪɴɢ")
        await k.delete()
    except:
        await sts.edit(f"Please Make Your [Userbot](t.me/{_bot['username']}) Admin In Target Chat With Full Permissions")
