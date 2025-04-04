@@ -35,10 +35,15 @@ main_buttons = [[
 async def start(client, message):
     user = message.from_user
     await message.reply("#")
-    if not await db.is_user_exist(user.id):
-        await message.reply("#")
-        await db.add_user(user.id, user.first_name)
-        await message.reply("#")
+    try:
+        if not await db.is_user_exist(user.id):
+            await message.reply("#")
+            await db.add_user(user.id, user.first_name)
+            await message.reply("#")
+    except Exception as e:
+        await message.reply("⚠️ An error occurred while checking or adding the user.")
+        logger.error(f"Error in user registration: {e}")
+
     reply_markup = InlineKeyboardMarkup(main_buttons)
     await message.reply("#")
     jishubotz = await message.reply_sticker("CAACAgUAAxkBAAECEEBlLA-nYcsWmsNWgE8-xqIkriCWAgACJwEAAsiUZBTiPWKAkUSmmh4E")
