@@ -18,11 +18,11 @@ from pyrogram import Client, filters, enums, __version__ as pyrogram_version
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaDocument
 
 main_buttons = [[
-        InlineKeyboardButton('📢 Uᴩᴅᴀᴛᴇ', url='https://t.me/Bot_Cracker'),
-        InlineKeyboardButton('💬 Sᴜᴩᴩᴏʀᴛ', url='https://t.me/Mod_Moviez_X')
+        InlineKeyboardButton('◈ Uᴩᴅᴀᴛᴇ ◈', url='https://t.me/Bot_Cracker'),
+        InlineKeyboardButton('⦿ Sᴜᴩᴩᴏʀᴛ ⦿', url='https://t.me/Mod_Moviez_X')
         ],[
-        InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help'),
-        InlineKeyboardButton('🩷 Aʙᴏᴜᴛ', callback_data='about')
+        InlineKeyboardButton('⊛ Hᴇʟᴩ ⊛', callback_data='help'),
+        InlineKeyboardButton('✧ Aʙᴏᴜᴛ ✧', callback_data='about')
        # ],[
      #   InlineKeyboardButton('🧑‍💻 Dᴇᴠᴇʟ 🧑‍💻', url='https://t.me/CallAdminRobot')
         ]]
@@ -36,17 +36,15 @@ async def start(client, message):
     user = message.from_user
     try:
         if not await db.is_user_exist(user.id):
-            await message.reply("#")
             await db.add_user(user.id, user.first_name)
     except Exception as e:
         await message.reply(f"⚠️ An error occurred while checking or adding the user. {e}")
         logger.error(f"Error in user registration: {e}")
 
     reply_markup = InlineKeyboardMarkup(main_buttons)
-    await message.reply("#")
-    jishubotz = await message.reply_sticker("CAACAgUAAxkBAAECEEBlLA-nYcsWmsNWgE8-xqIkriCWAgACJwEAAsiUZBTiPWKAkUSmmh4E")
+    syd = await message.reply_sticker("CAACAgUAAxkBAAKlPWfvngykYJT-Q_3zzGyfqePnnQXXAAI3GAACF22BV0gDVTTEeAZaNgQ")
     await asyncio.sleep(2)
-    await jishubotz.delete()
+    await syd.delete()
     text=Translation.START_TXT.format(user.mention)
     await message.reply_text(
         text=text,
@@ -78,12 +76,12 @@ async def helpcb(bot, query):
         text=Translation.HELP_TXT,
         reply_markup=InlineKeyboardMarkup(
             [[
-            InlineKeyboardButton('🛠️ How To Use Me 🛠️', callback_data='how_to_use')
+            InlineKeyboardButton('∿ Hᴏᴡ To Uꜱᴇ Mᴇ ∿', callback_data='how_to_use')
             ],[
-            InlineKeyboardButton('⚙️ Settings ⚙️', callback_data='settings#main'),
-            InlineKeyboardButton('📊 Stats 📊', callback_data='status')
+            InlineKeyboardButton('⛭ SᴇᴛᴛɪɴɢS ⛭', callback_data='settings#main'),
+            InlineKeyboardButton('∗ SᴛᴀᴛS ∗', callback_data='status')
             ],[
-            InlineKeyboardButton('🔙 Back', callback_data='back')
+            InlineKeyboardButton('⇇ Bᴀᴄᴋ', callback_data='back')
             ]]
         ))
 
@@ -93,7 +91,7 @@ async def helpcb(bot, query):
 async def how_to_use(bot, query):
     await query.message.edit_text(
         text=Translation.HOW_USE_TXT,
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('🔙 Back', callback_data='help')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⇇ Bᴀᴄᴋ', callback_data='help')]]),
         disable_web_page_preview=True
     )
 
@@ -113,7 +111,7 @@ async def back(bot, query):
 async def about(bot, query):
     await query.message.edit_text(
         text=Translation.ABOUT_TXT.format(bot.me.mention),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('🔙 Back', callback_data='back')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⇇ Bᴀᴄᴋ', callback_data='back')]]),
         disable_web_page_preview=True,
         parse_mode=enums.ParseMode.HTML,
     )
@@ -126,7 +124,7 @@ async def status(bot, query):
     total_channels = await db.total_channels()
     await query.message.edit_text(
         text=Translation.STATUS_TXT.format(users_count, bots_count, temp.forwardings, total_channels, temp.BANNED_USERS ),
-        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('🔙 Back', callback_data='help')]]),
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton('⇇ Bᴀᴄᴋ', callback_data='help')]]),
         parse_mode=enums.ParseMode.HTML,
         disable_web_page_preview=True,
     )
