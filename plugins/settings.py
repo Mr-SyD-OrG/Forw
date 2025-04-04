@@ -398,8 +398,8 @@ async def settings_query(bot, query):
   elif type == "get_keyword":
     keywords = (await get_configs(user_id))['keywords']
     btn = extract_btn(keywords)
-    btn.append([InlineKeyboardButton('✚ Add ✚', 'settings#add_keyword')])
-    btn.append([InlineKeyboardButton('Remove All', 'settings#rmve_all_keyword')])
+    btn.append([InlineKeyboardButton('✚ Aᴅᴅ ✚', 'settings#add_keyword')])
+    btn.append([InlineKeyboardButton('Rᴇᴍᴏᴠᴇ Aʟʟ', 'settings#rmve_all_keyword')])
     btn.append([InlineKeyboardButton('🔙 Back', 'settings#main')])
     await query.message.edit_text(
         text='<b><u>Keywords</u></b>\n\nFile With These Keywords In File Name Will Forwad',
@@ -415,22 +415,22 @@ async def settings_query(bot, query):
       
 def main_buttons():
   buttons = [[
-       InlineKeyboardButton('🤖 Bots',
+       InlineKeyboardButton('🤖 Bᴏᴛꜱ',
                     callback_data=f'settings#bots'),
-       InlineKeyboardButton('🔥 Channels',
+       InlineKeyboardButton('🔥 Cʜᴀɴɴᴇʟꜱ',
                     callback_data=f'settings#channels')
        ],[
-       InlineKeyboardButton('✏️ Caption',
+       InlineKeyboardButton('✏️ Cᴀᴩᴛɪᴏɴ',
                     callback_data=f'settings#caption'),
-       InlineKeyboardButton('🗃 MongoDB',
+       InlineKeyboardButton('🗃 MᴏɴɢᴏDB',
                     callback_data=f'settings#database')
        ],[
-       InlineKeyboardButton('🕵‍♀ Filters',
+       InlineKeyboardButton('🕵‍♀ Fɪʟᴛᴇʀꜱ',
                     callback_data=f'settings#filters'),
-       InlineKeyboardButton('🏓 Button',
+       InlineKeyboardButton('🏓 Bᴜᴛᴛᴏɴ',
                     callback_data=f'settings#button')
        ],[
-       InlineKeyboardButton('⚙️ Extra Settings',
+       InlineKeyboardButton('⚙️ Exᴛʀꜱ Sᴇᴛᴛɪɴɢꜱ',
                     callback_data='settings#nextfilters')
        ],[      
        InlineKeyboardButton('🔙 Back', callback_data='back')
