@@ -41,7 +41,7 @@ async def start(client, message):
             await db.add_user(user.id, user.first_name)
             await message.reply("#")
     except Exception as e:
-        await message.reply("⚠️ An error occurred while checking or adding the user.")
+        await message.reply(f"⚠️ An error occurred while checking or adding the user. {e}")
         logger.error(f"Error in user registration: {e}")
 
     reply_markup = InlineKeyboardMarkup(main_buttons)
