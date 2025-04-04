@@ -1,12 +1,12 @@
 from pyrogram import *
-from info import *
+from config import Config
 import asyncio
-from Script import script
+#from Script import script
 from .db import *
 import re
 from pyrogram.errors import FloodWait
 from pyrogram.types import *
-
+ADMIN = Config.OWNER_ID
 @Client.on_message(filters.command("start") & filters.private)
 async def strtCap(bot, message):
     user_id = int(message.from_user.id)
@@ -159,7 +159,7 @@ def get_size(size):
 @Client.on_callback_query(filters.regex(r'^start'))
 async def start(bot, query):
     await query.message.edit_text(
-        text=script.START_TXT.format(query.from_user.mention),  
+        text=f"<b>Hᴇʟʟᴏ {message.from_user.mention}\n\nɪ ᴀᴍ ᴀᴜᴛᴏ ᴄᴀᴘᴛɪᴏɴ ʙᴏᴛ ᴡɪᴛʜ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.\n\nFᴏʀ ᴍᴏʀᴇ ɪɴғᴏ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.\n\nMᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ »<a href='https://t.me/Mrkillerdeveloper'>Mʀᴋɪʟʟᴇʀ Dᴇᴠᴇʟᴏᴘᴇʀ</a>\n\n\n<spoiler>Cʀᴇᴅɪᴛ ɢᴏᴇs ᴛᴏ:-<a href='https://t.me/Silicon_Bot_Update'>Sɪʟɪᴄᴏɴ Bᴏᴛᴢ</a></spoiler></b>",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton("⨭ Δᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇL ⨮", url=f"https://t.me/AutoCaption_Robot?startchannel=true")
