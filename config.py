@@ -15,7 +15,7 @@ class Config:
     BOT_SESSION = os.environ.get("BOT_SESSION", "forward-bot") 
     DB_URL = os.environ.get("DB_URL", "")
     PORT = os.environ.get("PORT", "8080")
-    DB_NAME = os.environ.get("DB_NAME", "Cluster0")
+    DB_NAME = os.environ.get("DB_NAME", "cluster0")
     OWNER_ID = [int(id) for id in os.environ.get("OWNER_ID", '').split()]
 
 
