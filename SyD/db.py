@@ -1,10 +1,10 @@
 import motor.motor_asyncio
-from config import *
+from config import Config
 
-client = motor.motor_asyncio.AsyncIOMotorClient(DB_URL)
+client = motor.motor_asyncio.AsyncIOMotorClient(Config.DB_URL)
 db = client.captions_with_chnl
 chnl_ids = db.chnl_ids
-users = db.users
+users = db.userss
 
 async def addCap(chnl_id, caption):
     dets = {"chnl_id": chnl_id, "caption": caption}
