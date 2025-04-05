@@ -57,8 +57,8 @@ class Bot(Client):
         await web.TCPSite(app, bind_address, PORT).start()
         await idle()
         syd = Client(
-            f"{mrsyd}", API_ID, API_HASH,
-            bot_token=BT_TOKEN,
+            f"{mrsyd}", Config.API_ID, Config.API_HASH,
+            bot_token=Config.BT_TOKEN,
             plugins={"root": "SyD"}
         )
         await syd.start()
