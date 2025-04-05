@@ -12,6 +12,7 @@ class Config:
     API_ID = os.environ.get("API_ID", "")
     API_HASH = os.environ.get("API_HASH", "")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    BT_TOKEN = os.environ.get("BT_TOKEN", "") 
     BOT_SESSION = os.environ.get("BOT_SESSION", "forward-bot") 
     DB_URL = os.environ.get("DB_URL", "")
     PORT = os.environ.get("PORT", "8080")
