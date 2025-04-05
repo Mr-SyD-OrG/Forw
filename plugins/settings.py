@@ -56,7 +56,7 @@ async def settings_query(bot, query):
      buttons.append([InlineKeyboardButton('⇇ Bᴀᴄᴋ', 
                       callback_data="settings#main")])
      await query.message.edit_text(
-       "<b><u>My Bots</u></b>\n\nYou Can Manage Your Bots In Here",
+       "<b><u>Mʏ Bᴏᴛꜱ</u></b>\n\nYᴏᴜ Cᴀɴ Mᴀɴᴀɢᴇ Yᴏᴜʀ Bᴏᴛꜱ Iɴ Hᴇʀᴇ \nAᴅᴅ Tʜɪꜱ Bᴏᴛ Tᴀʀɢᴇᴛ Cʜᴀᴛ ᴀɴᴅ Sᴏᴜʀᴄᴇ Cʜᴀᴛ ✨",
        reply_markup=InlineKeyboardMarkup(buttons))
   
   elif type=="addbot":
@@ -97,7 +97,7 @@ async def settings_query(bot, query):
          if chat_ids.text=="/cancel":
             await chat_ids.delete()
             return await text.edit_text(
-                  "Process Canceled",
+                  "Pʀᴏᴄᴇꜱꜱ Cᴀɴᴄᴇʟʟᴇᴅ !",
                   reply_markup=InlineKeyboardMarkup(buttons))
          elif not chat_ids.forward_date:
             await chat_ids.delete()
@@ -138,7 +138,7 @@ async def settings_query(bot, query):
                ],
                [InlineKeyboardButton('⇇ Bᴀᴄᴋ', callback_data="settings#channels")]]
      await query.message.edit_text(
-        f"<b><u>📄 Channel Details</b></u>\n\n<b>Title :</b> <code>{chat['title']}</code>\n<b>Channel ID :</b> <code>{chat['chat_id']}</code>\n<b>Username :</b> {chat['username']}",
+        f"<b><u>📄 Cʜᴀɴɴᴇʟ Dᴇᴛᴀɪʟꜱ</b></u>\n\n<b>Tɪᴛʟᴇ :</b> <code>{chat['title']}</code>\n<b>Cʜᴀɴɴᴇʟ ID :</b> <code>{chat['chat_id']}</code>\n<b>Uꜱᴇʀɴᴀᴍᴇ :</b> {chat['username']}",
         reply_markup=InlineKeyboardMarkup(buttons))
                                              
   elif type.startswith("removechannel"):
@@ -180,7 +180,7 @@ async def settings_query(bot, query):
   elif type=="deletecaption":
      await update_configs(user_id, 'caption', None)
      await query.message.edit_text(
-        "Successfully Updated",
+        "Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Uᴩᴅᴀᴛᴇᴅ ✓",
         reply_markup=InlineKeyboardMarkup(buttons))
                               
   elif type=="addcaption":
@@ -191,7 +191,7 @@ async def settings_query(bot, query):
          if caption.text=="/cancel":
             await caption.delete()
             return await text.edit_text(
-                  "Process Canceled !",
+                  "Pʀᴏᴄᴇꜱꜱ Cᴀɴᴄᴇʟʟᴇᴅ !",
                   reply_markup=InlineKeyboardMarkup(buttons))
          try:
             caption.text.format(filename='', size='', caption='')
@@ -222,7 +222,7 @@ async def settings_query(bot, query):
      buttons.append([InlineKeyboardButton('⇇ Bᴀᴄᴋ', 
                       callback_data="settings#main")])
      await query.message.edit_text(
-        "<b><u>Custom Button</b></u>\n\nYou Can Set A Inline Bᴜᴛᴛᴏɴ To Messages.\n\n<b><u>Format :</b></u>\n`[MadBotz][buttonurl:https://t.me/Madfx_Bots]`\n",
+        "<b><u>Cᴜꜱᴛᴏᴍ Bᴜᴛᴛᴏɴ</b></u>\n\nYᴏᴜ Cᴀɴ Sᴇᴛ Aɴ Iɴʟɪɴᴇ Bᴜᴛᴛᴏɴ To Mᴇꜱꜱᴀɢᴇꜱ Wʜɪᴄʜ Wɪʟʟ Bᴇ Fᴏʀᴡᴀʀᴅᴇᴅ.\n\n<b><u>Fᴏʀᴍᴀᴛ :</b></u>\n`[Mᴏᴅ Mᴏᴠɪᴇᴢ x][buttonurl:https://t.me/Mod_Moviez_X]`\n",
         reply_markup=InlineKeyboardMarkup(buttons))
   
   elif type=="addbutton":
@@ -233,7 +233,7 @@ async def settings_query(bot, query):
          button = parse_buttons(ask.text.html)
          if not button:
             await ask.delete()
-            return await txt.edit_text("Invalid Button")
+            return await txt.edit_text("Iɴᴠᴀʟɪᴅ Bᴜᴛᴛᴏɴ ⛒")
          await update_configs(user_id, 'button', ask.text.html)
          await ask.delete()
          await txt.edit_text("Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Bᴜᴛᴛᴏɴ Aᴅᴅᴇᴅ ✓",
@@ -277,18 +277,18 @@ async def settings_query(bot, query):
      uri = await bot.ask(user_id, "<b>please send your mongodb url.</b>\n\n<i>get your Mongodb url from [here](https://mongodb.com)</i>", disable_web_page_preview=True)
      if uri.text=="/cancel":
         return await uri.reply_text(
-                  "Process Cancelled !",
+                  "Pʀᴏᴄᴇꜱꜱ Cᴀɴᴄᴇʟʟᴇᴅ !",
                   reply_markup=InlineKeyboardMarkup(buttons))
      if not uri.text.startswith("mongodb+srv://") and not uri.text.endswith("majority"):
-        return await uri.reply("Invalid Mongodb URL",
+        return await uri.reply("Iɴᴠᴀʟɪᴅ MᴏɴɢᴏDB Uʀʟ ⛒, Aᴠᴏᴏᴅ '/' Iɴ Eɴᴅ Iꜰ Tʜᴇʀᴇ Iᴛ Iꜱ Aᴠᴀɪʟᴀʙʟᴇ",
                    reply_markup=InlineKeyboardMarkup(buttons))
      await update_configs(user_id, 'db_uri', uri.text)
-     await uri.reply("Successfully Database URL Added ✅",
+     await uri.reply("Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Dᴀᴛᴀʙᴀꜱᴇ Uʀʟ Aᴅᴅᴇᴅ ✓",
              reply_markup=InlineKeyboardMarkup(buttons))
   
   elif type=="seeurl":
      db_uri = (await get_configs(user_id))['db_uri']
-     await query.answer(f"Database URL : {db_uri}", show_alert=True)
+     await query.answer(f"Dᴀᴛᴀʙᴀꜱᴇ Uʀʟ : {db_uri}", show_alert=True)
   
   elif type=="deleteurl":
      await update_configs(user_id, 'db_uri', None)
@@ -322,7 +322,7 @@ async def settings_query(bot, query):
     size = settings.get('file_size', 0)
     i, limit = size_limit(settings['size_limit'])
     await query.message.edit_text(
-       f'<b><u>Size Limit</u></b>\n\nYou Can Set File Size Limit To Forward\n\nStatus : Files With {limit} `{size} MB` Will Forward',
+       f'<b><u>Sɪᴢᴇ Lɪᴍɪᴛ</u></b>\n\nYᴏᴜ Cᴀɴ Sᴇᴛ Fɪʟᴇ Sɪᴢᴇ Lɪᴍɪᴛ To Fᴏᴡᴀʀᴅ\n\nSᴛᴀᴛᴜꜱ : Fɪʟᴇꜱ Wɪᴛʜ {limit} `{size} ᴍʙ` Wɪʟʟ Bᴇ Fᴏʀᴡᴀʀᴅ',
        reply_markup=size_button(size))
   
   elif type.startswith("update_size"):
@@ -332,7 +332,7 @@ async def settings_query(bot, query):
     await update_configs(user_id, 'file_size', size)
     i, limit = size_limit((await get_configs(user_id))['size_limit'])
     await query.message.edit_text(
-       f'<b><u>Size Limit</u></b>\n\nYou Can Set File Size Limit To Forward\n\nStatus : Files With {limit} `{size} MB` Will Forward',
+       f'<b><u>Sɪᴢᴇ Lɪᴍɪᴛ</u></b>\n\nYᴏᴜ Fᴏᴡᴀʀᴅ Tᴏ Fᴏᴡᴀʀᴅ\n\nSᴛᴀᴛᴜꜱ : Fɪʟᴇꜱ Wɪᴛʜ {limit} `{size} ᴍʙ` Wɪʟʟ Bᴇ Fᴏʀᴡᴀʀᴅ',
        reply_markup=size_button(size))
   
   elif type.startswith('update_limit'):
@@ -348,7 +348,7 @@ async def settings_query(bot, query):
     ext = await bot.ask(user_id, text="Please Send Your Extensions (Seperete By Space)")
     if ext.text == '/cancel':
        return await ext.reply_text(
-                  "Process Cancelled",
+                  "Pʀᴏᴄᴇꜱꜱ Cᴀɴᴄᴇʟʟᴇᴅ !",
                   reply_markup=InlineKeyboardMarkup(buttons))
     extensions = ext.text.split(" ")
     extension = (await get_configs(user_id))['extension']
@@ -359,7 +359,7 @@ async def settings_query(bot, query):
         extension = extensions
     await update_configs(user_id, 'extension', extension)
     await ext.reply_text(
-        f"Successfully Updated",
+        f"Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Uᴩᴅᴀᴛᴇᴅ ✓",
         reply_markup=InlineKeyboardMarkup(buttons))
       
   elif type == "get_extension":
@@ -381,7 +381,7 @@ async def settings_query(bot, query):
     ask = await bot.ask(user_id, text="Please Send The Keywords (Seperete By Space)")
     if ask.text == '/cancel':
        return await ask.reply_text(
-                  "Process Canceled",
+                  "Pʀᴏᴄᴇꜱꜱ Cᴀɴᴄᴇʟʟᴇᴅ !",
                   reply_markup=InlineKeyboardMarkup(buttons))
     keywords = ask.text.split(" ")
     keyword = (await get_configs(user_id))['keywords']
@@ -392,7 +392,7 @@ async def settings_query(bot, query):
         keyword = keywords
     await update_configs(user_id, 'keywords', keyword)
     await ask.reply_text(
-        f"Successfully Updated",
+        f"Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Uᴩᴅᴀᴛᴇᴅ ✓",
         reply_markup=InlineKeyboardMarkup(buttons))
   
   elif type == "get_keyword":
