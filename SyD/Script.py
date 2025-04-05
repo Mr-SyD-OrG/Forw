@@ -8,9 +8,7 @@ class script(object):
 ‣ ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : <a href='https://t.me/Mrkillerdeveloper'>Mʀᴋɪʟʟᴇʀ Dᴇᴠᴇʟᴏᴘᴇʀ</a></b>
 """
 
-    HELP_TXT = """•••[( 𝘎𝘦𝘵 𝘏𝘦𝘭𝘱 )]•••
-
-❗ 𝗔𝗹𝗲𝗿𝘁 ❗
+    HELP_TXT = """⚹ Hᴇʟᴩ Txᴛ, Fᴏʀ Uꜱɪɴɢ Mᴇ
 
 • Aᴅᴅ ᴛʜɪs ʙᴏᴛ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ ᴡɪᴛʜ ғᴜʟʟ ᴀᴅᴍɪɴ ʀɪɢʜᴛs.
 • Usᴇ ᴄᴏᴍᴍᴀɴᴅ ɢɪᴠᴇ ʙᴇʟᴏᴡ ɪɴ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟ.
@@ -20,7 +18,7 @@ class script(object):
 •> /set_cap - Sᴇᴛ Nᴇᴡ Cᴀᴘᴛɪᴏɴ Iɴ ʏᴏᴜʀ Cʜᴀɴɴᴇʟ
 •> /del_cap - Dᴇʟᴇᴛᴇ Yᴏᴜʀ Cᴀᴘᴛɪᴏɴ
 
-𝑭𝒐𝒓𝒎𝒂𝒕
+❉ Fᴏʀᴍᴀᴛ; 
 
 `{file_name}` = Oʀɪɢɪɴᴀʟ Fɪʟᴇ Nᴀᴍᴇ
 `{file_size}` = Oʀɪɢɪɴᴀʟ Fɪʟᴇ Sɪᴢᴇ 
@@ -39,14 +37,14 @@ Eg:- `/set_cap
 ╚═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝`
 """
 
-    ABOUT_TXT = """<b>╔════❰ ᴀᴜᴛᴏ ᴄᴀᴘᴛɪᴏɴ ʙᴏᴛ ❱═❍⊱❁
+    ABOUT_TXT = """<b>╔════❰ ᴀᴜᴛᴏ ᴄᴀᴘᴛɪᴏɴ ᴇᴅɪᴛ ʙᴏᴛ ❱═❍⊱❁
 ║╭━━━━━━━━━━━━━━━➣
-║┣⪼📃ʙᴏᴛ : <a href='https://t.me/AutoCaption_Robot'>Auto Caption</a>
-║┣⪼👦Cʀᴇᴀᴛᴏʀ : <a href='https://t.me/Mrkiller_1109'>Mʀᴋɪʟʟᴇʀ  ⚠️</a>
-║┣⪼🤖Uᴘᴅᴀᴛᴇ : <a href='https://t.me/Mrkillerdeveloper'>Mʀᴋɪʟʟᴇʀ Dᴇᴠᴇʟᴏᴘᴇʀ™</a>
-║┣⪼📡Hᴏsᴛᴇᴅ ᴏɴ : VPS
-║┣⪼🗣️Lᴀɴɢᴜᴀɢᴇ : Pʏᴛʜᴏɴ3
-║┣⪼📚Lɪʙʀᴀʀʏ : Pʏʀᴏɢʀᴀᴍ 2.11.6
-║┣⪼🗒️Vᴇʀsɪᴏɴ : 2.0.8 [ᴍᴏsᴛ sᴛᴀʙʟᴇ]
+║┣⪼Bᴏᴛ : <a href='https://t.me/AutoCaption_Robot'>Auto Caption</a>
+║┣⪼Cʀᴇᴀᴛᴏʀ : <a href='https://t.me/Syd_Xyz'>Mʀ Sʏᴅ ✨</a>
+║┣⪼Uᴘᴅᴀᴛᴇ : <a href='https://t.me/Bot_Cracker'>Bᴏᴛ Cʀᴀᴄᴋᴇʀ 🎋 ™</a>
+║┣⪼Hᴏsᴛᴇᴅ ᴏɴ : TG
+║┣⪼Lᴀɴɢᴜᴀɢᴇ : Sᴀᴍᴇ ᴀꜱ ʏᴏᴜʀꜱ
+║┣⪼Lɪʙʀᴀʀʏ : Tᴇʟᴇɢʀᴀᴍ
+║┣⪼Vᴇʀsɪᴏɴ : 1.0.0 [ᴍᴏsᴛ sᴛᴀʙʟᴇ]
 ║╰━━━━━━━━━━━━━━━➣
 ╚══════════════════❍⊱❁</b>"""
