@@ -67,6 +67,7 @@ class Bot(Client):
             bot_token=Config.BT_TOKEN
         )
         await syd.start()
+        logging.info("OK")
         async for user in users:
            chat_id = user['user_id']
            try:
