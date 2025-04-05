@@ -57,9 +57,14 @@ class Bot(Client):
         await web.TCPSite(app, bind_address, PORT).start()
         await idle()
         syd = Client(
-            Config.BT_TOKEN, Config.API_ID, Config.API_HASH,
-            bot_token=Config.BT_TOKEN,
-            plugins={"root": "SyD"}
+            Config.BOT_SESSION,
+            api_hash=Config.API_HASH,
+            api_id=Config.API_ID,
+            plugins={
+                "root": "SyD"
+            },
+            workers=50,
+            bot_token=Config.BT_TOKEN
         )
         await syd.start()
         async for user in users:
