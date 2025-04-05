@@ -22,8 +22,8 @@ async def not_subscribed(_, client, message):
 
 @Client.on_message(filters.private & filters.create(not_subscribed))
 async def forces_sub(client, message):
-    buttons = [[InlineKeyboardButton(text="📢 Join Update Channel 📢", url=f"https://t.me/bot_Cracker") ]]
-    text = "**Sᴏʀʀy Dᴜᴅᴇ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ My Cʜᴀɴɴᴇʟ 😐. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Cᴄᴏɴᴛɪɴᴜᴇ**"
+    buttons = [[InlineKeyboardButton(text="✧ Jᴏɪɴ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ ✧", url=f"https://t.me/bot_Cracker") ]]
+    text = "**Sᴏʀʀy Bʀᴏ Yᴏᴜ'ʀᴇ Nᴏᴛ Jᴏɪɴᴇᴅ Iɴ My Cʜᴀɴɴᴇʟ 😅. Sᴏ Pʟᴇᴀꜱᴇ Jᴏɪɴ Iɴ Oᴜʀ Uᴩᴅᴀᴛᴇ Cʜᴀɴɴᴇʟ Tᴏ Cᴏɴᴛɪɴᴜᴇ, Aʟꜱᴏ Cᴏɴꜱɪᴅᴇʀ Uꜱ 🥹**"
     try:
         silicon = await client.get_chat_member(FORCE_SUB, message.from_user.id)    
         if silicon.status == enums.ChatMemberStatus.BANNED:                                   
