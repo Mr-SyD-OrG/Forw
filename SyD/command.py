@@ -7,6 +7,7 @@ import re
 from pyrogram.errors import FloodWait
 from pyrogram.types import *
 ADMIN = Config.OWNER_ID
+SYD = "https://envs.sh/c77.jpg https://envs.sh/cKM.jpg https://envs.sh/c78.jpg https://envs.sh/c7U.jpg https://envs.sh/c7k.jpg https://envs.sh/c74.jpg https://envs.sh/c71.jpg https://envs.sh/c7R.jpg https://envs.sh/c7Y.jpg https://envs.sh/c73.jpg https://envs.sh/c7z.jpg https://envs.sh/c7K.jpg https://envs.sh/cKO.jpg https://envs.sh/cKm.jpg".split()
 @Client.on_message(filters.command("start") & filters.private)
 async def strtCap(bot, message):
     user_id = int(message.from_user.id)
