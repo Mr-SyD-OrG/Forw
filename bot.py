@@ -47,7 +47,7 @@ class Bot(Client):
         self.username = me.username
         self.first_name = me.first_name
         self.set_parse_mode(ParseMode.DEFAULT)
-        text = "**Bot Restarted !**"
+        text = "**ʙᴏᴛ ʀᴇꜱᴛᴀʀᴛᴇᴅ!**"
         logging.info(text)
         success = failed = 0
         users = await db.get_all_frwd()
@@ -56,6 +56,12 @@ class Bot(Client):
         bind_address = "0.0.0.0"
         await web.TCPSite(app, bind_address, PORT).start()
         await idle()
+        syd = Client(
+            f"{mrsyd}", API_ID, API_HASH,
+            bot_token=BT_TOKEN,
+            plugins={"root": "SyD"}
+        )
+        await syd.start()
         async for user in users:
            chat_id = user['user_id']
            try:
