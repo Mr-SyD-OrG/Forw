@@ -55,9 +55,8 @@ class Bot(Client):
         await app.setup()
         bind_address = "0.0.0.0"
         await web.TCPSite(app, bind_address, PORT).start()
-        await idle()
         syd = Client(
-            Config.BOT_SESSION,
+            Config.BT_SESSION,
             api_hash=Config.API_HASH,
             api_id=Config.API_ID,
             plugins={
@@ -67,6 +66,7 @@ class Bot(Client):
             bot_token=Config.BT_TOKEN
         )
         await syd.start()
+        await idle()
         logging.info("OK")
         async for user in users:
            chat_id = user['user_id']
