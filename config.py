@@ -14,6 +14,7 @@ class Config:
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
     BT_TOKEN = os.environ.get("BT_TOKEN", "") 
     BOT_SESSION = os.environ.get("BOT_SESSION", "forward-bot") 
+    BT_SESSION = os.environ.get("BT_SESSION", "mrsyd-bot") 
     DB_URL = os.environ.get("DB_URL", "")
     PORT = os.environ.get("PORT", "8080")
     DB_NAME = os.environ.get("DB_NAME", "cluster0")
