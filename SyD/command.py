@@ -1,6 +1,7 @@
 from pyrogram import *
 from config import Config
 import asyncio
+import random
 from .Script import script
 from .db import *
 import re
@@ -25,7 +26,7 @@ async def strtCap(bot, message):
         ]]
     )
     await message.reply_photo(
-        photo=SYD,
+        photo=random.choice(SYD),
         caption=f"<b>Hᴇʟʟᴏ {message.from_user.mention}\n\nɪ ᴀᴍ ᴀᴜᴛᴏ ᴄᴀᴘᴛɪᴏɴ ᴇᴅɪᴛ ʙᴏᴛ ᴡɪᴛʜ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.\n\nFᴏʀ ᴍᴏʀᴇ ɪɴғᴏ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.\n\nMᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ » <a href='https://t.me/Bot_Cracker'>Bᴏᴛ Cʀᴀᴄᴋᴇʀ 🎋</a>\n\n<spoiler>Cʀᴇᴅɪᴛ ɢᴏᴇs ᴛᴏ:- <a href='https://t.me/Mod_Moviez_X'>Mᴏᴅ Mᴏᴠɪᴇᴢ X ✨</a></spoiler></b>",
         reply_markup=keyboard
     )
