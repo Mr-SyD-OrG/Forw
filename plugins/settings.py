@@ -64,7 +64,7 @@ async def settings_query(bot, query):
      bot = await CLIENT.add_bot(bot, query)
      if bot != True: return
      await query.message.reply_text(
-        "<b>Bᴏᴛ Tᴏᴋᴇɴ Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Aᴅᴅᴇᴅ Tᴏ Dᴀᴛᴀʙᴀꜱᴇ</b>",
+        "<b>Bᴏᴛ Tᴏᴋᴇɴ Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Aᴅᴅᴇᴅ Tᴏ Dᴀᴛᴀʙᴀꜱᴇ ✓</b>",
         reply_markup=InlineKeyboardMarkup(buttons))
   
   elif type=="adduserbot":
@@ -72,7 +72,7 @@ async def settings_query(bot, query):
      user = await CLIENT.add_session(bot, query)
      if user != True: return
      await query.message.reply_text(
-        "<b>Session Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Added To Database</b>",
+        "<b>Sᴇꜱꜱɪᴏɴ Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Aᴅᴅᴇᴅ Tᴏ Dᴀᴛᴀʙᴀꜱᴇ ✓</b>",
         reply_markup=InlineKeyboardMarkup(buttons))
       
   elif type=="channels":
@@ -86,13 +86,13 @@ async def settings_query(bot, query):
      buttons.append([InlineKeyboardButton('⇇ Bᴀᴄᴋ', 
                       callback_data="settings#main")])
      await query.message.edit_text( 
-       "<b><u>My Channels</u></b>\n\nYou Can Manage Your Target Chats In Here",
+       "<b><u>Mʏ Cʜᴀɴɴᴇʟᴀ</u></b>\n\nYᴏᴜ Cᴀɴ Mᴀɴᴀɢᴇ Yᴏᴜʀ Tᴀʀɢᴇᴛ Cʜᴀᴛꜱ Iɴ Hᴇʀᴇ!",
        reply_markup=InlineKeyboardMarkup(buttons))
    
   elif type=="addchannel":  
      await query.message.delete()
      try:
-         text = await bot.send_message(user_id, "<b><u>Set Target Chat</u></b>\n\nForward A Message From Your Target Chat\n/cancel - To Cancel This Process")
+         text = await bot.send_message(user_id, "<b><u>Sᴇᴛ Tᴀʀɢᴇᴛ Cʜᴀᴛ</u></b>\n\nFᴏʀᴡᴀʀᴅ A Mᴇꜱꜱᴀɢᴇ Fʀᴏᴍ Yᴏᴜʀ Tᴀʀɢᴇᴛ Cʜᴀᴛ\n/cancel - To Cancel This Process")
          chat_ids = await bot.listen(chat_id=user_id, timeout=300)
          if chat_ids.text=="/cancel":
             await chat_ids.delete()
@@ -101,7 +101,7 @@ async def settings_query(bot, query):
                   reply_markup=InlineKeyboardMarkup(buttons))
          elif not chat_ids.forward_date:
             await chat_ids.delete()
-            return await text.edit_text("This Is Not A Forward Message")
+            return await text.edit_text("Tʜɪꜱ Iꜱ Nᴏᴛ A Fᴏʀᴡᴀʀᴅᴇᴅ Mᴇꜱꜱᴀɢᴇ!")
          else:
             chat_id = chat_ids.forward_from_chat.id
             title = chat_ids.forward_from_chat.title
@@ -110,10 +110,10 @@ async def settings_query(bot, query):
          chat = await db.add_channel(user_id, chat_id, title, username)
          await chat_ids.delete()
          await text.edit_text(
-            "Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Updated" if chat else "This Channel Already Added",
+            "Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Uᴩᴅᴀᴛᴇᴅ ✓" if chat else "Tʜɪꜱ Cʜᴀɴɴᴇʟ Iꜱ Aʟʀᴇᴀᴅʏ Aᴅᴅᴇᴅ",
             reply_markup=InlineKeyboardMarkup(buttons))
      except asyncio.exceptions.TimeoutError:
-         await text.edit_text('Process Has Been Automatically Cancelled', reply_markup=InlineKeyboardMarkup(buttons))
+         await text.edit_text('Pʀᴏᴄᴇꜱꜱ Hᴀꜱ Bᴇᴇɴ Cᴀɴᴄᴇʟʟᴇᴅ Aᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ Dᴜᴇ Tᴏ Nᴏ Rᴇꜱᴩᴏɴꜱᴇ!', reply_markup=InlineKeyboardMarkup(buttons))
   
   elif type=="editbot": 
      bot = await db.get_bot(user_id)
@@ -128,7 +128,7 @@ async def settings_query(bot, query):
   elif type=="removebot":
      await db.remove_bot(user_id)
      await query.message.edit_text(
-        "Successfully Updated",
+        "Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Uᴩᴅᴀᴛᴇᴅ ✓",
         reply_markup=InlineKeyboardMarkup(buttons))
                                              
   elif type.startswith("editchannels"): 
@@ -145,7 +145,7 @@ async def settings_query(bot, query):
      chat_id = type.split('_')[1]
      await db.remove_channel(user_id, chat_id)
      await query.message.edit_text(
-        "Successfully Updated",
+        "Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Uᴩᴅᴀᴛᴇᴅ ✓",
         reply_markup=InlineKeyboardMarkup(buttons))
                                
   elif type=="caption":
@@ -203,7 +203,7 @@ async def settings_query(bot, query):
          await update_configs(user_id, 'caption', caption.text)
          await caption.delete()
          await text.edit_text(
-            "Successfully Updated",
+            "Sᴜᴄᴄᴇꜱꜱꜰᴜʟʏ Uᴩᴅᴀᴛᴇᴅ ✓",
             reply_markup=InlineKeyboardMarkup(buttons))
      except asyncio.exceptions.TimeoutError:
          await text.edit_text('Process Has Been Automatically Cancelled', reply_markup=InlineKeyboardMarkup(buttons))
