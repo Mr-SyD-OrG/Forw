@@ -25,7 +25,7 @@ async def strtCap(bot, message):
     )
     await message.reply_photo(
         photo='https://envs.sh/cKO.jpg',
-        caption=f"<b>Hᴇʟʟᴏ {message.from_user.mention}\n\nɪ ᴀᴍ ᴀᴜᴛᴏ ᴄᴀᴘᴛɪᴏɴ ᴇᴅɪᴛ ʙᴏᴛ ᴡɪᴛʜ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.\n\nFᴏʀ ᴍᴏʀᴇ ɪɴғᴏ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.\n\nMᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ »<a href='https://t.me/Bot_Cracker'>Bᴏᴛ Cʀᴀᴄᴋᴇʀ 🎋</a>\n\n<spoiler>Cʀᴇᴅɪᴛ ɢᴏᴇs ᴛᴏ:-<a href='https://t.me/Mod_Moviez_X'>Mᴏᴅ Mᴏᴠɪᴇᴢ X ✨</a></spoiler></b>",
+        caption=f"<b>Hᴇʟʟᴏ {message.from_user.mention}\n\nɪ ᴀᴍ ᴀᴜᴛᴏ ᴄᴀᴘᴛɪᴏɴ ᴇᴅɪᴛ ʙᴏᴛ ᴡɪᴛʜ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.\n\nFᴏʀ ᴍᴏʀᴇ ɪɴғᴏ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.\n\nMᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ » <a href='https://t.me/Bot_Cracker'>Bᴏᴛ Cʀᴀᴄᴋᴇʀ 🎋</a>\n\n<spoiler>Cʀᴇᴅɪᴛ ɢᴏᴇs ᴛᴏ:- <a href='https://t.me/Mod_Moviez_X'>Mᴏᴅ Mᴏᴠɪᴇᴢ X ✨</a></spoiler></b>",
         reply_markup=keyboard
     )
 
@@ -159,7 +159,7 @@ def get_size(size):
 @Client.on_callback_query(filters.regex(r'^start'))
 async def start(bot, query):
     await query.message.edit_text(
-        text=f"<b>Hᴇʟʟᴏ {message.from_user.mention}\n\nɪ ᴀᴍ ᴀᴜᴛᴏ ᴄᴀᴘᴛɪᴏɴ ᴇᴅɪᴛ ʙᴏᴛ ᴡɪᴛʜ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.\n\nFᴏʀ ᴍᴏʀᴇ ɪɴғᴏ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.\n\nMᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ »<a href='https://t.me/Bot_Cracker'>Bᴏᴛ Cʀᴀᴄᴋᴇʀ 🎋</a>\n\n<spoiler>Cʀᴇᴅɪᴛ ɢᴏᴇs ᴛᴏ:-<a href='https://t.me/Mod_Moviez_X'>Mᴏᴅ Mᴏᴠɪᴇᴢ X ✨</a></spoiler></b>",
+        text=f"<b>Hᴇʟʟᴏ {message.from_user.mention}\n\nɪ ᴀᴍ ᴀᴜᴛᴏ ᴄᴀᴘᴛɪᴏɴ ᴇᴅɪᴛ ʙᴏᴛ ᴡɪᴛʜ ᴄᴜsᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ.\n\nFᴏʀ ᴍᴏʀᴇ ɪɴғᴏ ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ᴄʟɪᴄᴋ ᴏɴ ʜᴇʟᴘ ʙᴜᴛᴛᴏɴ ɢɪᴠᴇɴ ʙᴇʟᴏᴡ.\n\nMᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ » <a href='https://t.me/Bot_Cracker'>Bᴏᴛ Cʀᴀᴄᴋᴇʀ 🎋</a>\n\n<spoiler>Cʀᴇᴅɪᴛ ɢᴏᴇs ᴛᴏ:- <a href='https://t.me/Mod_Moviez_X'>Mᴏᴅ Mᴏᴠɪᴇᴢ X ✨</a></spoiler></b>",
         reply_markup=InlineKeyboardMarkup(
             [[
                 InlineKeyboardButton("⨭ Δᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇL ⨮", url=f"https://t.me/AutoCaption_Robot?startchannel=true")
@@ -180,9 +180,9 @@ async def help(bot, query):
         text=script.HELP_TXT,
         reply_markup=InlineKeyboardMarkup(
             [[
-            InlineKeyboardButton('About', callback_data='about')
+            InlineKeyboardButton('✭ Aʙᴏᴜᴛ', callback_data='about')
             ],[
-            InlineKeyboardButton('↩ ʙᴀᴄᴋ', callback_data='start')
+            InlineKeyboardButton('⇇ Bᴀᴄᴋ', callback_data='start')
             ]]
         ),
         disable_web_page_preview=True    
@@ -195,9 +195,9 @@ async def about(bot, query):
         text=script.ABOUT_TXT,
         reply_markup=InlineKeyboardMarkup(
             [[
-            InlineKeyboardButton('ʜᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ❓', callback_data='help')
+            InlineKeyboardButton('Hᴏᴡ ᴛᴏ ᴜsᴇ ᴍᴇ ?', callback_data='help')
             ],[
-            InlineKeyboardButton('↩ ʙᴀᴄᴋ', callback_data='start')
+            InlineKeyboardButton('⇇ Bᴀᴄᴋ', callback_data='start')
             ]]
         ),
         disable_web_page_preview=True 
