@@ -16,6 +16,8 @@ from platform import python_version
 from translation import Translation
 from pyrogram import Client, filters, enums, __version__ as pyrogram_version
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InputMediaDocument
+from SyD.command import SYD
+
 
 main_buttons = [[
         InlineKeyboardButton('◈ Uᴩᴅᴀᴛᴇ ◈', url='https://t.me/Bot_Cracker'),
@@ -45,7 +47,7 @@ async def start(client, message):
     syd = await message.reply_sticker("CAACAgUAAxkBAAKlPWfvngykYJT-Q_3zzGyfqePnnQXXAAI3GAACF22BV0gDVTTEeAZaNgQ")
     await asyncio.sleep(2)
     await syd.delete()
-    await client.send_photo(chat_id=user.id, photo="https://envs.sh/cKm.jpg")
+    await client.send_photo(chat_id=user.id, photo=SYD)
     text=Translation.START_TXT.format(user.mention)
     await message.reply_text(
         text=text,
