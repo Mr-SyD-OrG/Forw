@@ -504,52 +504,52 @@ async def filters_buttons(user_id):
   filter = await get_configs(user_id)
   filters = filter['filters']
   buttons = [[
-       InlineKeyboardButton('🏷️ Forward Tag',
+       InlineKeyboardButton('🏷️ Fᴏʀᴡᴀʀᴅ Tᴀɢ',
                     callback_data=f'settings_#updatefilter-forward_tag-{filter["forward_tag"]}'),
        InlineKeyboardButton('✅' if filter['forward_tag'] else '❌',
                     callback_data=f'settings#updatefilter-forward_tag-{filter["forward_tag"]}')
        ],[
-       InlineKeyboardButton('🖍️ Texts',
+       InlineKeyboardButton('🖍️ Tᴇxᴛ',
                     callback_data=f'settings_#updatefilter-text-{filters["text"]}'),
        InlineKeyboardButton('✅' if filters['text'] else '❌',
                     callback_data=f'settings#updatefilter-text-{filters["text"]}')
        ],[
-       InlineKeyboardButton('📁 Documents',
+       InlineKeyboardButton('📁 Dᴏᴄᴜᴍᴇɴᴛꜱ',
                     callback_data=f'settings_#updatefilter-document-{filters["document"]}'),
        InlineKeyboardButton('✅' if filters['document'] else '❌',
                     callback_data=f'settings#updatefilter-document-{filters["document"]}')
        ],[
-       InlineKeyboardButton('🎞️ Videos',
+       InlineKeyboardButton('🎞️ Vɪᴅᴇᴏꜱ',
                     callback_data=f'settings_#updatefilter-video-{filters["video"]}'),
        InlineKeyboardButton('✅' if filters['video'] else '❌',
                     callback_data=f'settings#updatefilter-video-{filters["video"]}')
        ],[
-       InlineKeyboardButton('📷 Photos',
+       InlineKeyboardButton('📷 Pʜᴏᴛᴏꜱ',
                     callback_data=f'settings_#updatefilter-photo-{filters["photo"]}'),
        InlineKeyboardButton('✅' if filters['photo'] else '❌',
                     callback_data=f'settings#updatefilter-photo-{filters["photo"]}')
        ],[
-       InlineKeyboardButton('🎧 Audios',
+       InlineKeyboardButton('🎧 Aᴜᴅɪᴏ',
                     callback_data=f'settings_#updatefilter-audio-{filters["audio"]}'),
        InlineKeyboardButton('✅' if filters['audio'] else '❌',
                     callback_data=f'settings#updatefilter-audio-{filters["audio"]}')
        ],[
-       InlineKeyboardButton('🎤 Voices',
+       InlineKeyboardButton('🎤 Vᴏɪᴄᴇ',
                     callback_data=f'settings_#updatefilter-voice-{filters["voice"]}'),
        InlineKeyboardButton('✅' if filters['voice'] else '❌',
                     callback_data=f'settings#updatefilter-voice-{filters["voice"]}')
        ],[
-       InlineKeyboardButton('🎭 Animations',
+       InlineKeyboardButton('🎭 Aɴɪᴍᴀᴛɪᴏɴ',
                     callback_data=f'settings_#updatefilter-animation-{filters["animation"]}'),
        InlineKeyboardButton('✅' if filters['animation'] else '❌',
                     callback_data=f'settings#updatefilter-animation-{filters["animation"]}')
        ],[
-       InlineKeyboardButton('🃏 Stickers',
+       InlineKeyboardButton('🃏 Sᴛɪᴄᴋᴇʀꜱ',
                     callback_data=f'settings_#updatefilter-sticker-{filters["sticker"]}'),
        InlineKeyboardButton('✅' if filters['sticker'] else '❌',
                     callback_data=f'settings#updatefilter-sticker-{filters["sticker"]}')
        ],[
-       InlineKeyboardButton('▶️ Skip Duplicate',
+       InlineKeyboardButton('▶️ Sᴋɪᴩ Dᴜᴩʟɪᴄᴀᴛᴇ',
                     callback_data=f'settings_#updatefilter-duplicate-{filter["duplicate"]}'),
        InlineKeyboardButton('✅' if filter['duplicate'] else '❌',
                     callback_data=f'settings#updatefilter-duplicate-{filter["duplicate"]}')
@@ -563,23 +563,23 @@ async def next_filters_buttons(user_id):
   filter = await get_configs(user_id)
   filters = filter['filters']
   buttons = [[
-       InlineKeyboardButton('📊 Poll',
+       InlineKeyboardButton('📊 Pᴏʟʟ',
                     callback_data=f'settings_#updatefilter-poll-{filters["poll"]}'),
        InlineKeyboardButton('✅' if filters['poll'] else '❌',
                     callback_data=f'settings#updatefilter-poll-{filters["poll"]}')
        ],[
-       InlineKeyboardButton('🔒 Secure Message',
+       InlineKeyboardButton('🔒 Sᴇᴄᴜʀᴇ Mᴇꜱꜱᴀɢᴇ',
                     callback_data=f'settings_#updatefilter-protect-{filter["protect"]}'),
        InlineKeyboardButton('✅' if filter['protect'] else '❌',
                     callback_data=f'settings#updatefilter-protect-{filter["protect"]}')
        ],[
-       InlineKeyboardButton('🛑 Size Limit',
+       InlineKeyboardButton('🛑 Sɪᴢᴇ Lɪᴍɪᴛ',
                     callback_data='settings#file_size')
        ],[
-       InlineKeyboardButton('💾 Extension',
+       InlineKeyboardButton('💾 Exᴛᴇɴꜱɪᴏɴ',
                     callback_data='settings#get_extension')
        ],[
-       InlineKeyboardButton('📌 Keywords',
+       InlineKeyboardButton('📌 Kᴇʏᴡᴏʀᴅꜱ',
                     callback_data='settings#get_keyword')
        ],[
        InlineKeyboardButton('⇇ Bᴀᴄᴋ', 
