@@ -10,6 +10,7 @@
 import os
 import sys
 import asyncio 
+import random
 from database import db, mongodb_version
 from config import Config, temp
 from platform import python_version
@@ -47,7 +48,7 @@ async def start(client, message):
     syd = await message.reply_sticker("CAACAgUAAxkBAAKlPWfvngykYJT-Q_3zzGyfqePnnQXXAAI3GAACF22BV0gDVTTEeAZaNgQ")
     await asyncio.sleep(2)
     await syd.delete()
-    await client.send_photo(chat_id=user.id, photo=SYD)
+    await client.send_photo(chat_id=user.id, photo=random.choice(SYD))
     text=Translation.START_TXT.format(user.mention)
     await message.reply_text(
         text=text,
