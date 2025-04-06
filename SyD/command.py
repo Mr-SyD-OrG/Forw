@@ -80,10 +80,7 @@ async def restart_bot(b, m):
 async def setCap(bot, message):
     if len(message.command) < 2:
         return await message.reply(
-            "Usᴀɢᴇ: **/set_cap Yᴏᴜʀ Cᴀᴩᴛɪᴏɴ Hᴇʀᴇ /n Sᴏᴍᴇ Vᴀʀɪᴀʙʟᴇꜱ Fᴏʀ Cᴀᴩᴛɪᴏɴ /n<code>{file_name}</code> - Tᴏ Sʜᴏᴡ Yᴏᴜʀ FɪʟᴇNᴀᴍᴇ.\n\n<code>{file_size}</code> - Tᴏ Sʜᴏᴡ Yᴏᴜʀ Fɪʟᴇ Sɪᴢᴇ/n/n✓ Eᴠᴇʀʏᴛʜɪɴɢ Cʟᴇᴀʀ? Hᴏᴩɪɴɢ ✨ /n Exᴀᴍᴩʟᴇ: /set_cap /n{file_name}/n/n⚙️ Size » {file_size}/n🌐 Lang » {language}/n🗓️ Year » {year}/n/n╔═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
-💥 𝙅𝙊𝙄𝙉 :- ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ 
-💥 𝙅𝙊𝙄𝙉 :- ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ
-╚═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝`**"
+            "Usᴀɢᴇ: **<code>/set_cap Yᴏᴜʀ Cᴀᴩᴛɪᴏɴ Hᴇʀᴇ</code> /n Sᴏᴍᴇ Vᴀʀɪᴀʙʟᴇꜱ Fᴏʀ Cᴀᴩᴛɪᴏɴ Aʀᴇ Sʜᴏᴡɴ Iɴ Tʜᴇ Hᴇʟᴩ Pᴀɢᴇ🫧 /n/n✓ Eᴠᴇʀʏᴛʜɪɴɢ Cʟᴇᴀʀ? Hᴏᴩɪɴɢ ✨ /n Exᴀᴍᴩʟᴇ: <code>/set_cap /n{file_name}/n/n⚙️ Size » {file_size}/n🌐 Lang » {language}/n🗓️ Year » {year}/n/n╔═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗/n💥 𝙅𝙊𝙄𝙉 :- ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ /n💥 𝙅𝙊𝙄𝙉 :Hin|ʜᴀɴɴᴇʟ ʟɪɴᴋ/n╚═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝</code>`**"
         )
     chnl_id = message.chat.id
     caption = (
@@ -110,10 +107,10 @@ async def delCap(_, msg):
         return
 
 def extract_language(default_caption):
-    language_pattern = r'\b(Hindi|English|Tamil|Telugu|Malayalam|Kannada|Hin)\b'#Contribute More Language If You Have
+    language_pattern = r'\b(Hindi|English|Tamil|Telugu|Malayalam|Mal|Tam|Tel|Eng|Kan|Urd|Urdu|Japanese|Jap|Chinese|Bengali||Arabic|Kannada|Hin)\b'#Contribute More Language If You Have
     languages = set(re.findall(language_pattern, default_caption, re.IGNORECASE))
     if not languages:
-        return "Hindi-English"
+        return "[Audio]"
     return ", ".join(sorted(languages, key=str.lower))
 
 def extract_year(default_caption):
