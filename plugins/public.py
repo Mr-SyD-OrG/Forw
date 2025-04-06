@@ -15,14 +15,22 @@ from database import db
 from config import temp 
 from translation import Translation
 from pyrogram import Client, filters, enums
-from pyrogram.errors import FloodWait 
+from pyrogram.errors import FloodWait, UserNotParticipant
 from pyrogram.errors.exceptions.not_acceptable_406 import ChannelPrivate as PrivateChat
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, ChatAdminRequired, UsernameInvalid, UsernameNotModified, ChannelPrivate
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove, UserNotParticipant
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
  
 SYD_CHANNELS = ["Bot_Cracker", "Mod_Moviez_X"]
 
- 
+ async def not_subscribed(_, __, message):
+    for channel in SYD_CHANNELS:
+        try:
+            user = await message._client.get_chat_member(channel, message.from_user.id)
+            if user.status in {"kicked", "left"}:
+                return True
+        except UserNotParticipant:
+            return True
+    return False
 #===================Run Function===================#
 
 @Client.on_message(filters.private & filters.command(["fwd", "forward"]))
