@@ -76,8 +76,11 @@ async def restart_bot(b, m):
     await silicon.edit("**✅️ ʙᴏᴛ ɪꜱ ʀᴇꜱᴛᴀʀᴛᴇᴅ. 𝙽𝙾𝚆 𝚈𝙾𝚄 𝙲𝙰𝙽 𝚄𝚂𝙴 𝙼𝙴**")
     os.execl(sys.executable, sys.executable, *sys.argv)
 
-@Client.on_message(filters.command("set_cap") & filters.channel)
+@Client.on_message(filters.command("set_cap"))
 async def setCap(bot, message):
+    if not message.chat.type == enums.ChatType.CHANNEL:
+        await message.reply("Pʟᴇᴀꜱᴇ ꜱᴇɴᴅ ɪᴛ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴡᴏʀᴋ, ʙʏ ᴇᴅɪᴛɪɴɢ ᴄᴀᴩᴛɪᴏɴꜱ ❕")
+        return
     if len(message.command) < 2:
         return await message.reply(
             "Usᴀɢᴇ: **<code>/set_cap Yᴏᴜʀ Cᴀᴩᴛɪᴏɴ Hᴇʀᴇ</code> /n Sᴏᴍᴇ Vᴀʀɪᴀʙʟᴇꜱ Fᴏʀ Cᴀᴩᴛɪᴏɴ Aʀᴇ Sʜᴏᴡɴ Iɴ Tʜᴇ Hᴇʟᴩ Pᴀɢᴇ🫧 /n/n✓ Eᴠᴇʀʏᴛʜɪɴɢ Cʟᴇᴀʀ? Hᴏᴩɪɴɢ ✨ /n Exᴀᴍᴩʟᴇ: <code>/set_cap /n{file_name}/n/n⚙️ Size » {file_size}/n🌐 Lang » {language}/n🗓️ Year » {year}/n/n╔═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗/n💥 𝙅𝙊𝙄𝙉 :- ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ /n💥 𝙅𝙊𝙄𝙉 :Hin|ʜᴀɴɴᴇʟ ʟɪɴᴋ/n╚═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝</code>`**"
@@ -110,7 +113,7 @@ def extract_language(default_caption):
     language_pattern = r'\b(Hindi|English|Tamil|Telugu|Malayalam|Mal|Tam|Tel|Eng|Kan|Urd|Urdu|Japanese|Jap|Chinese|Bengali||Arabic|Kannada|Hin)\b'#Contribute More Language If You Have
     languages = set(re.findall(language_pattern, default_caption, re.IGNORECASE))
     if not languages:
-        return "[Audio]"
+        return "Audio"
     return ", ".join(sorted(languages, key=str.lower))
 
 def extract_year(default_caption):
