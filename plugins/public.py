@@ -147,7 +147,55 @@ async def run(bot, message):
 
 
 
+@Client.on_callback_query(filters.regex("check_subscription"))
+async def check_subscription(client, callback_query: CallbackQuery):
+    user_id = callback_query.from_user.id
+    not_joined_channels = []
 
+    for channel in SYD_CHANNELS:
+        try:
+            user = await client.get_chat_member(channel, user_id)
+            if user.status in {"kicked", "left"}:
+                not_joined_channels.append(channel)
+        except UserNotParticipant:
+            not_joined_channels.append(channel)
+
+    if not not_joined_channels:
+        await callback_query.reply("🎊")
+        await callback_query.message.edit_text(
+            "**Tʜᴀɴᴋꜱ ✨, Yᴏᴜ ʜᴀᴠᴇ ᴊᴏɪɴᴇᴅ ᴏɴ ᴀʟʟ ᴛʜᴇ ʀᴇqᴜɪʀᴇᴅ ᴄʜᴀɴɴᴇʟꜱ. \nCʟɪᴄᴋ ᴏɴ 😊 /forward ɴᴏᴡ ᴛᴏ ꜱᴛᴀʀᴛ ᴛʜᴇ ᴩʀᴏᴄᴇꜱꜱ.....⚡**"
+        )
+    else:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text=f"✧ Jᴏɪɴ {channel.capitalize()} ✧",
+                    url=f"https://t.me/{channel}",
+                )
+            ]
+            for channel in not_joined_channels
+        ]
+        buttons.append(
+            [
+                InlineKeyboardButton(
+                    text="✧ Jᴏɪɴ Back-up ✧", url="https://t.me/+0Zi1FC4ulo8zYzVl"
+
+                )
+            ]
+        )
+
+        buttons.append(
+            [
+                InlineKeyboardButton(
+                    text="✔ ɪ ᴀᴍ ᴊᴏɪɴᴇᴅ ✔", callback_data="check_subscription"
+                )
+            ]
+        )
+
+        text = "**Sᴛɪʟʟ 🥲, ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴊᴏɪɴ ɪɴ ᴏᴜʀ ᴀʟʟ ʀᴇqᴜɪʀᴇᴅ ᴄʜᴀɴɴᴇʟꜱ, ᴩʟᴇᴀꜱᴇ ᴅᴏ ꜱᴏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ,,... ⚡✨ .**"
+        await callback_query.message.edit_text(
+            text=text, reply_markup=InlineKeyboardMarkup(buttons)
+     )
 
 
 # Jishu Developer 
