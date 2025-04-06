@@ -80,7 +80,10 @@ async def restart_bot(b, m):
 async def setCap(bot, message):
     if len(message.command) < 2:
         return await message.reply(
-            "Usᴀɢᴇ: **/set_cap Yᴏᴜʀ Cᴀᴩᴛɪᴏɴ Hᴇʀᴇ /n Sᴏᴍᴇ Vᴀʀɪᴀʙʟᴇꜱ Fᴏʀ Cᴀᴩᴛɪᴏɴ /n<code>{file_name}</code> - Tᴏ Sʜᴏᴡ Yᴏᴜʀ FɪʟᴇNᴀᴍᴇ.\n\n<code>{file_size}</code> - Tᴏ Sʜᴏᴡ Yᴏᴜʀ Fɪʟᴇ Sɪᴢᴇ/n/n✓ Eᴠᴇʀʏᴛʜɪɴɢ Cʟᴇᴀʀ? Hᴏᴩɪɴɢ ✨ /n Exᴀᴍᴩʟᴇ: **"
+            "Usᴀɢᴇ: **/set_cap Yᴏᴜʀ Cᴀᴩᴛɪᴏɴ Hᴇʀᴇ /n Sᴏᴍᴇ Vᴀʀɪᴀʙʟᴇꜱ Fᴏʀ Cᴀᴩᴛɪᴏɴ /n<code>{file_name}</code> - Tᴏ Sʜᴏᴡ Yᴏᴜʀ FɪʟᴇNᴀᴍᴇ.\n\n<code>{file_size}</code> - Tᴏ Sʜᴏᴡ Yᴏᴜʀ Fɪʟᴇ Sɪᴢᴇ/n/n✓ Eᴠᴇʀʏᴛʜɪɴɢ Cʟᴇᴀʀ? Hᴏᴩɪɴɢ ✨ /n Exᴀᴍᴩʟᴇ: /set_cap /n{file_name}/n/n⚙️ Size » {file_size}/n🌐 Lang » {language}/n🗓️ Year » {year}/n/n╔═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗
+💥 𝙅𝙊𝙄𝙉 :- ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ 
+💥 𝙅𝙊𝙄𝙉 :- ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ
+╚═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝`**"
         )
     chnl_id = message.chat.id
     caption = (
