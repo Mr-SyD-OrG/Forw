@@ -18,9 +18,9 @@ from pyrogram import Client, filters, enums
 from pyrogram.errors import FloodWait 
 from pyrogram.errors.exceptions.not_acceptable_406 import ChannelPrivate as PrivateChat
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, ChatAdminRequired, UsernameInvalid, UsernameNotModified, ChannelPrivate
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove, UserNotParticipant
  
-
+SYD_CHANNELS = ["Bot_Cracker", "Mod_Moviez_X"]
 
  
 #===================Run Function===================#
@@ -36,6 +36,43 @@ async def run(bot, message):
     channels = await db.get_user_channels(user_id)
     if not channels:
        return await message.reply_text("Please Set A To Channel In /settings Before Forwarding")
+    not_joined_channels = []
+    for channel in SYD_CHANNELS:
+        try:
+            user = await client.get_chat_member(channel, message.from_user.id)
+            if user.status in {"kicked", "left"}:
+                not_joined_channels.append(channel)
+        except UserNotParticipant:
+            not_joined_channels.append(channel)
+            
+    if not_joined_channels:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text=f"✧ Jᴏɪɴ {channel.capitalize()} ✧", url=f"https://t.me/{channel}"
+                )
+            ]
+        for channel in not_joined_channels
+        ]
+        buttons.append(
+            [
+                InlineKeyboardButton(
+                    text="✧ Jᴏɪɴ Back-up ✧", url="https://t.me/+0Zi1FC4ulo8zYzVl"
+
+                )
+            ]
+        )
+        buttons.append(
+            [
+                InlineKeyboardButton(
+                    text="✔ ɪ ᴀᴍ ᴊᴏɪɴᴇᴅ ✔", callback_data="check_subscription"
+                )
+            ]
+        )
+
+        text = "**Sᴏʀʀʏ, ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴊᴏɪɴ ɪɴ ᴏᴜʀ ʀᴇqᴜɪʀᴇᴅ ᴄʜᴀɴɴᴇʟꜱ, ᴩʟᴇᴀꜱᴇ ᴅᴏ ꜱᴏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ,,... ⚡ .**"
+        return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
+        
     if len(channels) > 1:
        for channel in channels:
           buttons.append([KeyboardButton(f"{channel['title']}")])
