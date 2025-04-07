@@ -107,15 +107,15 @@ class CLIENT:
      elif not msg.forward_date:
        return await msg.reply_text("Tʜɪꜱ Iꜱ Nᴏᴛ Fᴏʀᴡᴀʀᴅᴇᴅ Mᴇꜱꜱᴀɢᴇ !")
      elif str(msg.forward_from.id) != "93372553":
-       return await msg.reply_text("This Message Was Not Forward From Bot Father")
+       return await msg.reply_text("Tʜɪꜱ Mᴇꜱꜱᴀɢᴇ Wᴀꜱ Nᴏᴛ Fᴏʀᴡᴀʀᴅᴇᴅ Fʀᴏᴍ Tʜᴇ Bᴏᴛ Fᴀᴛʜᴇʀ !")
      bot_token = re.findall(r'\d[0-9]{8,10}:[0-9A-Za-z_-]{35}', msg.text, re.IGNORECASE)
      bot_token = bot_token[0] if bot_token else None
      if not bot_token:
-       return await msg.reply_text("There Is No Bot Token In That Message")
+       return await msg.reply_text("Tʜᴇʀᴇ Iꜱ No Bᴏᴛ Tᴏᴋᴇɴ Iɴ Tʜᴀᴛ Mᴇꜱꜱᴀɢᴇ !Tʀʏ Aɢᴀɪɴ Pʟᴇᴀꜱᴇ !")
      try:
        _client = await start_clone_bot(self.client(bot_token, False), True)
      except Exception as e:
-       await msg.reply_text(f"Bot Error :</b> `{e}`")
+       await msg.reply_text(f"Bot Error :</b> `{e}` /nFᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ @Syd_Xyz Iꜰ ʏᴏᴜ ɴᴇᴇᴅ HELP !")
      _bot = _client.me
      details = {
        'id': _bot.id,
@@ -132,17 +132,17 @@ class CLIENT:
 
   async def add_session(self, bot, message):
      user_id = int(message.from_user.id)
-     text = "<b>⚠️ Disclaimer ⚠️</b>\n\nYou Can Use Your Session For Forward Message From Private Chat To Another Chat.\nPlease Add Your Pyrogram Session With Your Own Risk. Their Is A Chance To Ban Your Account. My Developer Is Not Responsible If Your Account May Get Banned."
+     text = "<b>⚠️ Dɪꜱᴄʟᴀɪᴍᴇʀ ⚠️</b>\n\nYᴏᴜ Cᴀɴ Uꜱᴇ Yoᴜʀ Sᴇꜱꜱɪᴏɴ Fᴏʀ Fᴏʀᴡᴀʀᴅɪɴɢ Mᴇꜱꜱᴀɢᴇ Fʀᴏᴍ Pʀɪᴠᴀᴛᴇ Cʜᴀᴛ Tᴏ Aɴᴏᴛʜᴇʀ Cʜᴀᴛ.\nPlease Add Your Pyrogram Session With Your Own Risk. Their Is A Chance To Ban Your Account. My Developer Is Not Responsible If Your Account May Get Banned."
      await bot.send_message(user_id, text=text)
      msg = await bot.ask(chat_id=user_id, text="<b>Send your pyrogram session.\nget it from @mdsessiongenbot\n\n/cancel - cancel the process</b>")
      if msg.text=='/cancel':
-        return await msg.reply('Process Cancelled !')
+        return await msg.reply('<b>Pʀᴏᴄᴇꜱꜱ Cᴀɴᴄᴇʟʟᴇᴅ !</b>')
      elif len(msg.text) < SESSION_STRING_SIZE:
-        return await msg.reply('Invalid Session String')
+        return await msg.reply('Iɴᴠᴀʟɪᴅ Sᴇꜱꜱɪᴏɴ Sᴛʀɪɴɢ !')
      try:
        client = await start_clone_bot(self.client(msg.text, True), True)
      except Exception as e:
-       await msg.reply_text(f"<b>User Bot Error :</b> `{e}`")
+       await msg.reply_text(f"<b>User Bot Error :</b> `{e}` /nFᴏʀᴡᴀʀᴅ ɪᴛ ᴛᴏ @Syd_Xyz Iꜰ ʏᴏᴜ ɴᴇᴇᴅ HELP !")
      user = client.me
      details = {
        'id': user.id,
