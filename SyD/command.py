@@ -37,6 +37,10 @@ async def all_db_users_here(client,message):
     silicon_botz = await total_user()
     await silicon.edit(f"Tᴏᴛᴀʟ Usᴇʀ :- `{silicon_botz}`")
 
+@Client.on_message(filters.command("start") & filters.chat(-1002687879857))
+async def sysdstart(client, message):
+    await message.reply_text(".")
+
 @Client.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
 async def broadcast(bot, message):
     if (message.reply_to_message):
