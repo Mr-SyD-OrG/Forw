@@ -132,7 +132,7 @@ class CLIENT:
 
   async def add_session(self, bot, message):
      user_id = int(message.from_user.id)
-     text = "<b>⚠️ Dɪꜱᴄʟᴀɪᴍᴇʀ ⚠️</b>\n\nYᴏᴜ Cᴀɴ Uꜱᴇ Yoᴜʀ Sᴇꜱꜱɪᴏɴ Fᴏʀ Fᴏʀᴡᴀʀᴅɪɴɢ Mᴇꜱꜱᴀɢᴇ Fʀᴏᴍ Pʀɪᴠᴀᴛᴇ Cʜᴀᴛ Tᴏ Aɴᴏᴛʜᴇʀ Cʜᴀᴛ.\nPlease Add Your Pyrogram Session With Your Own Risk. Their Is A Chance To Ban Your Account. My Developer Is Not Responsible If Your Account May Get Banned."
+     text = "<b>⚠️ Dɪꜱᴄʟᴀɪᴍᴇʀ ⚠️</b>\n\nYᴏᴜ Cᴀɴ Uꜱᴇ Yoᴜʀ Sᴇꜱꜱɪᴏɴ Fᴏʀ Fᴏʀᴡᴀʀᴅɪɴɢ Mᴇꜱꜱᴀɢᴇ Fʀᴏᴍ Pʀɪᴠᴀᴛᴇ Cʜᴀᴛ Tᴏ Aɴᴏᴛʜᴇʀ Cʜᴀᴛ.\nPʟᴇᴀꜱᴇ Aᴅᴅ Yᴏᴜʀ <b>Pʏʀᴏɢʀᴀᴍ Sᴇꜱꜱɪᴏɴ Wɪᴛʜ Yᴏᴜʀ Oᴡɴ Rɪꜱᴋ </b>. Tʜᴇʀᴇ Iꜱ A Cʜᴀɴᴄᴇ To Ban Your Account. My Developer Is Not Responsible If Your Account May Get Banned."
      await bot.send_message(user_id, text=text)
      msg = await bot.ask(chat_id=user_id, text="<b>Send your pyrogram session.\nget it from @mdsessiongenbot\n\n/cancel - cancel the process</b>")
      if msg.text=='/cancel':
