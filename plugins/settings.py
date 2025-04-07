@@ -86,7 +86,7 @@ async def settings_query(bot, query):
      buttons.append([InlineKeyboardButton('⇇ Bᴀᴄᴋ', 
                       callback_data="settings#main")])
      await query.message.edit_text( 
-       "<b><u>Mʏ Cʜᴀɴɴᴇʟᴀ</u></b>\n\nYᴏᴜ Cᴀɴ Mᴀɴᴀɢᴇ Yᴏᴜʀ Tᴀʀɢᴇᴛ Cʜᴀᴛꜱ Iɴ Hᴇʀᴇ!",
+       "<b><u>Mʏ Cʜᴀɴɴᴇʟꜱ</u></b>\n\nYᴏᴜ Cᴀɴ Mᴀɴᴀɢᴇ Yᴏᴜʀ Tᴀʀɢᴇᴛ Cʜᴀᴛꜱ Iɴ Hᴇʀᴇ!",
        reply_markup=InlineKeyboardMarkup(buttons))
    
   elif type=="addchannel":  
