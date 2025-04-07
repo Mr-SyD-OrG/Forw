@@ -71,7 +71,7 @@ async def restart(client, message):
     os.execl(sys.executable, sys.executable, *sys.argv)
     
 @Client.on_message(filters.command("start") & filters.chat(-1002687879857))
-async def restart(client, message):
+async def sydstart(client, message):
     await message.reply_text(".")
 
 #==================Callback Functions==================#
