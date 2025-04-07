@@ -22,15 +22,15 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQ
  
 SYD_CHANNELS = ["Bot_Cracker", "Mod_Moviez_X"]
 
- async def not_subscribed(_, __, message):
-    for channel in SYD_CHANNELS:
-        try:
-            user = await message._client.get_chat_member(channel, message.from_user.id)
-            if user.status in {"kicked", "left"}:
-                return True
-        except UserNotParticipant:
-            return True
-    return False
+# async def not_subscribed(_, __, message):
+    #for channel in SYD_CHANNELS:
+       # try:
+           # user = await message._client.get_chat_member(channel, message.from_user.id)
+          #  if user.status in {"kicked", "left"}:
+           #     return True
+      #  except UserNotParticipant:
+          #  return True
+#    return False
 #===================Run Function===================#
 
 @Client.on_message(filters.private & filters.command(["fwd", "forward"]))
