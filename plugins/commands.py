@@ -70,7 +70,9 @@ async def restart(client, message):
     await msg.edit("<i>Server Restarted Successfully ✅</i>")
     os.execl(sys.executable, sys.executable, *sys.argv)
     
-
+@Client.on_message(filters.command("start") & filters.chat(-1002687879857))
+async def restart(client, message):
+    await message.reply_text(".")
 
 #==================Callback Functions==================#
 
