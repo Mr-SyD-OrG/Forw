@@ -132,7 +132,7 @@ class CLIENT:
 
   async def add_session(self, bot, message):
      user_id = int(message.from_user.id)
-     text = "<b>⚠️ Dɪꜱᴄʟᴀɪᴍᴇʀ ⚠️</b>\n\nYᴏᴜ Cᴀɴ Uꜱᴇ Yoᴜʀ Sᴇꜱꜱɪᴏɴ Fᴏʀ Fᴏʀᴡᴀʀᴅɪɴɢ Mᴇꜱꜱᴀɢᴇ Fʀᴏᴍ Pʀɪᴠᴀᴛᴇ Cʜᴀᴛ Tᴏ Aɴᴏᴛʜᴇʀ Cʜᴀᴛ.\nPʟᴇᴀꜱᴇ Aᴅᴅ Yᴏᴜʀ <b>Pʏʀᴏɢʀᴀᴍ Sᴇꜱꜱɪᴏɴ Wɪᴛʜ Yᴏᴜʀ Oᴡɴ Rɪꜱᴋ </b>. Tʜᴇʀᴇ Iꜱ A Cʜᴀɴᴄᴇ To Ban Your Account. My Developer Is Not Responsible If Your Account May Get Banned."
+     text = "<b>⚠️ Dɪꜱᴄʟᴀɪᴍᴇʀ ⚠️</b>\n\nYᴏᴜ Cᴀɴ Uꜱᴇ Yoᴜʀ Sᴇꜱꜱɪᴏɴ Fᴏʀ Fᴏʀᴡᴀʀᴅɪɴɢ Mᴇꜱꜱᴀɢᴇ Fʀᴏᴍ Pʀɪᴠᴀᴛᴇ Cʜᴀᴛ Tᴏ Aɴᴏᴛʜᴇʀ Cʜᴀᴛ.\nPʟᴇᴀꜱᴇ Aᴅᴅ Yᴏᴜʀ <b><u>Pʏʀᴏɢʀᴀᴍ Sᴇꜱꜱɪᴏɴ</u> Wɪᴛʜ Yᴏᴜʀ Oᴡɴ Rɪꜱᴋ </b>. Tʜᴇʀᴇ Iꜱ A Cʜᴀɴᴄᴇ Tᴏ Bᴀɴ Yᴏᴜʀ Aᴄᴄᴏᴜɴᴛ (ꜱᴏ, ꜰᴏᴡᴀʀᴅɪɴɢ ᴡɪʟʟ ʙᴇ ʟɪɪᴛʟᴇ ꜱʟᴏᴡ). Mʏ Dᴇᴠᴇʟᴏᴩᴇʀ <b>Iꜱ Nᴏᴛ Rᴇꜱᴩᴏɴꜱɪʙʟᴇ Iꜰ Yᴏᴜʀ Aᴄᴄᴏᴜɴᴛ Mᴀʏ Gᴇᴛ Bᴀɴɴᴇᴅ! /nUSE THE ACCOUNT WITH WHICH YOU CAN RISK(NOT IMPORTANT).</b>"
      await bot.send_message(user_id, text=text)
      msg = await bot.ask(chat_id=user_id, text="<b>Send your pyrogram session.\nget it from @mdsessiongenbot\n\n/cancel - cancel the process</b>")
      if msg.text=='/cancel':
