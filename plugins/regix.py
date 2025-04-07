@@ -38,7 +38,7 @@ async def pub_(bot, message):
     temp.CANCEL[user] = False
     frwd_id = message.data.split("_")[2]
     if temp.lock.get(user) and str(temp.lock.get(user))=="True":
-      return await message.answer("Please Wait Until Previous Task Complete", show_alert=True)
+      return await message.answer("Pʟᴇᴀꜱᴇ Wᴀɪᴛ Uɴᴛɪʟ Pʀᴇᴠɪᴏᴜꜱ Tᴀꜱᴋ Cᴏᴍᴩʟᴇᴛᴇ !", show_alert=True)
     sts = STS(frwd_id)
     if not sts.verify():
       await message.answer("Your Are Clicking On My Old Button", show_alert=True)
@@ -61,24 +61,24 @@ async def pub_(bot, message):
        await msg_edit(m, f"Source Chat May Be A Private Channel / Group. Use Userbot (User Must Be Member Over There) Or  If Make Your [Bot](t.me/{_bot['username']}) An Admin Over There", retry_btn(frwd_id), True)
        return await stop(client, user)
     try:
-       k = await client.send_message(i.TO, "Testing")
+       k = await client.send_message(i.TO, "Tᴇꜱᴛɪɴɢ......")
        await k.delete()
     except:
        await msg_edit(m, f"Please Make Your [UserBot / Bot](t.me/{_bot['username']}) Admin In Target Channel With Full Permissions", retry_btn(frwd_id), True)
        return await stop(client, user)
     temp.forwardings += 1
     await db.add_frwd(user)
-    await send(client, user, "🩷 Forwarding Started")
+    await send(client, user, "Fᴏʀᴡᴀʀᴅɪɴɢ Sᴛᴀʀᴛᴇᴅ 🗝️")
     sts.add(time=True)
     sleep = 1 if _bot['is_bot'] else 10
-    await msg_edit(m, "Processing...") 
+    await msg_edit(m, "Pʀᴏᴄᴄᴇꜱꜱɪɴɢ...") 
     temp.IS_FRWD_CHAT.append(i.TO)
     temp.lock[user] = locked = True
     if locked:
         try:
           MSG = []
           pling=0
-          await edit(m, 'Progressing', 10, sts)
+          await edit(m, 'Pʀᴏɢʀᴇꜱꜱꜱɪɴɢ', 10, sts)
           print(f"Starting Forwarding Process... From :{sts.get('FROM')} To: {sts.get('TO')} Totel: {sts.get('limit')} Stats : {sts.get('skip')})")
           async for message in client.iter_messages(
             client,
@@ -89,7 +89,7 @@ async def pub_(bot, message):
                 if await is_cancelled(client, user, m, sts):
                    return
                 if pling %20 == 0: 
-                   await edit(m, 'Progressing', 10, sts)
+                   await edit(m, 'Pʀᴏɢʀᴇꜱꜱɪɴɢ', 10, sts)
                 pling += 1
                 sts.add('fetched')
                 if message == "DUPLICATE":
@@ -122,7 +122,7 @@ async def pub_(bot, message):
             temp.IS_FRWD_CHAT.remove(sts.TO)
             return await stop(client, user)
         temp.IS_FRWD_CHAT.remove(sts.TO)
-        await send(client, user, "🎉 Forwarding Completed")
+        await send(client, user, "Fᴏʀᴡᴀʀᴅɪɴɢ Cᴏᴍᴩʟᴇᴛᴇᴅ 😇")
         await edit(m, 'Completed', "completed", sts) 
         await stop(client, user)
             
@@ -144,9 +144,9 @@ async def copy(bot, msg, m, sts):
               reply_markup=msg.get('button'),
               protect_content=msg.get("protect"))
    except FloodWait as e:
-     await edit(m, 'Progressing', e.value, sts)
+     await edit(m, 'Pʀᴏɢʀᴇꜱꜱɪɴɢ', e.value, sts)
      await asyncio.sleep(e.value)
-     await edit(m, 'Progressing', 10, sts)
+     await edit(m, 'Pʀᴏɢʀᴇꜱꜱɪɴɢ', 10, sts)
      await copy(bot, msg, m, sts)
    except Exception as e:
      print(e)
@@ -166,17 +166,12 @@ async def forward(bot, msg, m, sts, protect):
      await forward(bot, msg, m, sts, protect)
 
 PROGRESS = """
-📈 Percetage : {0} %
-
-♻️ Fetched : {1}
-
-🔥 Forwarded : {2}
-
-🫠 Remaining : {3}
-
-📊 Status : {4}
-
-⏳️ ETA : {5}
+📈 Pᴇʀᴄᴇɴᴛᴀɢᴇ : {0} %
+♻️ Fᴇᴛᴄʜᴇᴅ : {1}
+🔥 Fᴏʀᴡᴀʀᴅᴇᴅ : {2}
+🫠 Rᴇᴍᴀɪɴɪɴɢ : {3}
+📊 Sᴛᴀᴛᴜꜱ : {4}
+⏳️ Eᴛᴀ : {5}
 """
 
 async def msg_edit(msg, text, button=None, wait=None):
@@ -191,7 +186,7 @@ async def msg_edit(msg, text, button=None, wait=None):
         
 async def edit(msg, title, status, sts):
    i = sts.get(full=True)
-   status = 'Forwarding' if status == 10 else f"Sleeping {status} s" if str(status).isnumeric() else status
+   status = 'Fᴏʀᴡᴀʀᴅɪɴɢ' if status == 10 else f"Sʟᴇᴇᴩɪɴɢ {status} s" if str(status).isnumeric() else status
    percentage = "{:.0f}".format(float(i.fetched)*100/float(i.total))
    
    now = time.time()
