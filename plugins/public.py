@@ -57,7 +57,7 @@ async def run(bot, message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=f"✧ Jᴏɪɴ {channel.capitalize()} ✧", url=f"https://t.me/{channel}"
+                    text=f"✧ Jᴏɪɴ ✧", url=f"https://t.me/{channel}"
                 )
             ]
         for channel in not_joined_channels
