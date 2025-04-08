@@ -47,7 +47,7 @@ async def run(bot, message):
     not_joined_channels = []
     for channel in SYD_CHANNELS:
         try:
-            user = await client.get_chat_member(channel, message.from_user.id)
+            user = await bot.get_chat_member(channel, message.from_user.id)
             if user.status in {"kicked", "left"}:
                 not_joined_channels.append(channel)
         except UserNotParticipant:
@@ -78,7 +78,7 @@ async def run(bot, message):
             ]
         )
 
-        text = "**Sᴏʀʀʏ, ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴊᴏɪɴ ɪɴ ᴏᴜʀ ʀᴇqᴜɪʀᴇᴅ ᴄʜᴀɴɴᴇʟꜱ, ᴩʟᴇᴀꜱᴇ ᴅᴏ ꜱᴏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ,,... ⚡ .**"
+        text = "**Sᴏʀʀʏ, ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴊᴏɪɴ ɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟꜱ, ᴩʟᴇᴀꜱᴇ ᴅᴏ ꜱᴏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ,,... ⚡ .**"
         return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
         
     if len(channels) > 1:
