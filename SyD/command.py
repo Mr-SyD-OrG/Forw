@@ -83,7 +83,7 @@ async def restart_bot(b, m):
 @Client.on_message(filters.command("set_cap"))
 async def setCap(bot, message):
     if not message.chat.type == enums.ChatType.CHANNEL:
-        await message.reply("Pʟᴇᴀꜱᴇ ꜱᴇɴᴅ ɪᴛ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴡᴏʀᴋ, ʙʏ ᴇᴅɪᴛɪɴɢ ᴄᴀᴩᴛɪᴏɴꜱ ❕")
+        await message.reply("Pʟᴇᴀꜱᴇ ꜱᴇɴᴅ ɪᴛ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ, ɪɴ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴡᴏʀᴋ, ʙʏ ᴇᴅɪᴛɪɴɢ ᴄᴀᴩᴛɪᴏɴꜱ ❕")
         return
     if len(message.command) < 2:
         return await message.reply(
@@ -101,8 +101,11 @@ async def setCap(bot, message):
         await addCap(chnl_id, caption)
         return await message.reply(f"Yᴏᴜʀ Nᴇᴡ Cᴀᴘᴛɪᴏɴ Is: {caption}")
 
-@Client.on_message(filters.command("del_cap") & filters.channel)
+@Client.on_message(filters.command("del_cap"))
 async def delCap(_, msg):
+    if not message.chat.type == enums.ChatType.CHANNEL:
+        await message.reply("Pʟᴇᴀꜱᴇ ꜱᴇɴᴅ ɪᴛ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ, ɪɴ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴡᴏʀᴋ, ʙʏ ᴇᴅɪᴛɪɴɢ ᴄᴀᴩᴛɪᴏɴꜱ ❕")
+        return
     chnl_id = msg.chat.id
     try:
         await chnl_ids.delete_one({"chnl_id": chnl_id})
