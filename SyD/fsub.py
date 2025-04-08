@@ -3,7 +3,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserNotParticipant
 #from info import *
 from .db import insert
-FORCE_SUB = -1001541018556
+FORCE_SUB = 'bot_Cracker'
 async def not_subscribed(_, client, message):
     user_id = int(message.from_user.id)
     await insert(user_id)
