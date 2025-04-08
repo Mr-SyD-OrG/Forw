@@ -29,7 +29,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 BTN_URL_REGEX = re.compile(r"(\[([^\[]+?)]\[buttonurl:/{0,2}(.+?)(:same)?])")
-BOT_TOKEN_TEXT = "1) Cʀᴇᴀᴛᴇ A Bᴏᴛ Uꜱɪɴɢ @BotFather [ꜱᴇɴᴅ <code>/newbot</code> ᴛᴏ ʙᴏᴛ ꜰᴀᴛʜᴇʀ ᴀɴᴅ ᴛʜᴇ ɴᴀᴍᴇ ᴀɴᴅ ᴜꜱᴇʀɴᴀᴍᴇ ʀᴇꜱᴩᴇᴄᴛɪᴠᴇʟʏ]\n\n2) Tʜᴇɴ Yᴏᴜ Wɪʟʟ Gᴇᴛ A Mᴇꜱꜱᴀɢᴇ Wɪᴛʜ Bᴏᴛ Tᴏᴋᴇɴ\n\n3) Fᴏʀᴡᴀʀᴅ Tʜᴀᴛ Mᴇꜱꜱᴀɢᴇ Tᴏ Mᴇ /n/nIꜰ Yᴏᴜ Hᴀᴠᴇ A Bᴏᴛ Aʟʀᴇᴀᴅʏ, Yᴏᴜ Cᴀɴ Fᴏʀᴡᴀʀᴅ Iᴛꜱ Tᴏᴋᴇɴ Fʀᴏᴍ API Bᴏᴛ Tᴏᴋᴇɴ."
+BOT_TOKEN_TEXT = "1) Cʀᴇᴀᴛᴇ A Bᴏᴛ Uꜱɪɴɢ @BotFather [ꜱᴇɴᴅ <code>/newbot</code> ᴛᴏ ʙᴏᴛ ꜰᴀᴛʜᴇʀ ᴀɴᴅ ᴛʜᴇ ɴᴀᴍᴇ ᴀɴᴅ ᴜꜱᴇʀɴᴀᴍᴇ ʀᴇꜱᴩᴇᴄᴛɪᴠᴇʟʏ]\n\n2) Tʜᴇɴ Yᴏᴜ Wɪʟʟ Gᴇᴛ A Mᴇꜱꜱᴀɢᴇ Wɪᴛʜ Bᴏᴛ Tᴏᴋᴇɴ\n\n3) Fᴏʀᴡᴀʀᴅ Tʜᴀᴛ Mᴇꜱꜱᴀɢᴇ Tᴏ Mᴇ \n\nIꜰ Yᴏᴜ Hᴀᴠᴇ A Bᴏᴛ Aʟʀᴇᴀᴅʏ, Yᴏᴜ Cᴀɴ Fᴏʀᴡᴀʀᴅ Iᴛꜱ Tᴏᴋᴇɴ Fʀᴏᴍ API Bᴏᴛ Tᴏᴋᴇɴ."
 SESSION_STRING_SIZE = 351
 
 
