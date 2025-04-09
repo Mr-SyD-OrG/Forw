@@ -101,6 +101,20 @@ async def setCap(bot, message):
         await addCap(chnl_id, caption)
         return await message.reply(f"Yᴏᴜʀ Nᴇᴡ Cᴀᴘᴛɪᴏɴ Is: {caption}")
 
+@Client.on_message(filters.command("see_cap"))
+async def setCap(bot, message):
+    if not message.chat.type == enums.ChatType.CHANNEL:
+        await message.reply("Pʟᴇᴀꜱᴇ ꜱᴇɴᴅ ɪᴛ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ, ɪɴ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴡᴏʀᴋ, ʙʏ ᴇᴅɪᴛɪɴɢ ᴄᴀᴩᴛɪᴏɴꜱ ❕")
+        return
+    chnl_id = message.chat.id
+    cap_dets = await chnl_ids.find_one({"chnl_id": chnl_id})
+    try:
+        if cap_dets:
+            cap = cap_dets["caption"]
+            await message.reply(f"Cᴜʀʀᴇɴᴛ Cᴀᴩᴛɪᴏɴ 🌟 :{cap}")
+        
+
+
 @Client.on_message(filters.command("del_cap"))
 async def delCap(_, msg):
     if not message.chat.type == enums.ChatType.CHANNEL:
