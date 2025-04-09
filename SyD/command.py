@@ -87,7 +87,7 @@ async def setCap(bot, message):
         return
     if len(message.command) < 2:
         return await message.reply(
-            "Usᴀɢᴇ: **<code>/set_cap Yᴏᴜʀ Cᴀᴩᴛɪᴏɴ Hᴇʀᴇ</code> /n Sᴏᴍᴇ Vᴀʀɪᴀʙʟᴇꜱ Fᴏʀ Cᴀᴩᴛɪᴏɴ Aʀᴇ Sʜᴏᴡɴ Iɴ Tʜᴇ Hᴇʟᴩ Pᴀɢᴇ🫧 /n/n✓ Eᴠᴇʀʏᴛʜɪɴɢ Cʟᴇᴀʀ? Hᴏᴩɪɴɢ ✨ /n Exᴀᴍᴩʟᴇ: <code>/set_cap /n{file_name}/n/n⚙️ Size » {file_size}/n🌐 Lang » {language}/n🗓️ Year » {year}/n/n╔═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗/n💥 𝙅𝙊𝙄𝙉 :- ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ /n💥 𝙅𝙊𝙄𝙉 :Hin|ʜᴀɴɴᴇʟ ʟɪɴᴋ/n╚═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝</code>`**"
+            "Usᴀɢᴇ: **<code>/set_cap Yᴏᴜʀ Cᴀᴩᴛɪᴏɴ Hᴇʀᴇ</code> \nSᴏᴍᴇ Vᴀʀɪᴀʙʟᴇꜱ Fᴏʀ Cᴀᴩᴛɪᴏɴ Aʀᴇ Sʜᴏᴡɴ Iɴ Tʜᴇ Hᴇʟᴩ Pᴀɢᴇ🫧 \n\n✓ Eᴠᴇʀʏᴛʜɪɴɢ Cʟᴇᴀʀ? Hᴏᴩɪɴɢ ✨ \n Exᴀᴍᴩʟᴇ: <code>/set_cap \n{file_name}\n\n⚙️ Size » {file_size}\n🌐 Lang » {language}\n🗓️ Year » {year}\n\n╔═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╗\n💥 𝙅𝙊𝙄𝙉 :- ᴄʜᴀɴɴᴇʟ ʟɪɴᴋ \n💥 𝙅𝙊𝙄𝙉 :Hin|ʜᴀɴɴᴇʟ ʟɪɴᴋ\n╚═════ ᴊᴏɪɴ ᴡɪᴛʜ ᴜs ════╝</code>`**"
         )
     chnl_id = message.chat.id
     caption = (
