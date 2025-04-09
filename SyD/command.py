@@ -112,7 +112,9 @@ async def setCap(bot, message):
         if cap_dets:
             cap = cap_dets["caption"]
             await message.reply(f"Cᴜʀʀᴇɴᴛ Cᴀᴩᴛɪᴏɴ 🌟 :{cap}")
-        
+    except Exception as e:
+        await message.reply(f"ᴇʀʀᴏʀ [ ꜱᴇɴᴅ ɪᴛ ᴛᴏ ᴀᴅᴍɪɴ ꜰᴏʀ ʜᴇʟᴩ ] :{e}")
+
 
 
 @Client.on_message(filters.command("del_cap"))
