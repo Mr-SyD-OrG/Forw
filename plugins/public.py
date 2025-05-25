@@ -1,12 +1,3 @@
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
-
-
-
-
 
 import re
 import asyncio 
@@ -197,9 +188,3 @@ async def check_subscription(client, callback_query: CallbackQuery):
             text=text, reply_markup=InlineKeyboardMarkup(buttons)
      )
 
-
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
