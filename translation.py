@@ -42,8 +42,8 @@ class Translation(object):
   HOW_USE_TXT = """<b><u>⚠️ Bᴇꜰᴏʀᴇ Fᴏʀᴡᴀʀᴅ :</b></u>
   
 ► __Aᴅᴅ A Bᴏᴛ Oʀ Uꜱᴇʀʙᴏᴛ__
-► __Aᴅᴅ Aᴛʟᴇᴀꜱᴛ Oɴᴇ Tᴏ Cʜᴀɴɴᴇʟꜱ (Yᴏᴜʀ Bᴏᴛ/UꜱᴇʀBᴏᴛ Mᴜꜱᴛ Bᴇ Aᴅᴍɪɴ Tʜᴇʀᴇ)__
-► __You Can Add Chats Or Bots By Using /settings__
+► __Aᴅᴅ Aᴛʟᴇᴀꜱᴛ Oɴᴇ Cʜᴀᴛ Tᴏ Cʜᴀɴɴᴇʟꜱ (Yᴏᴜʀ Bᴏᴛ/UꜱᴇʀBᴏᴛ Mᴜꜱᴛ Bᴇ Aᴅᴍɪɴ Tʜᴇʀᴇ)__
+► __Yᴏᴜ Cᴀɴ Aᴅᴅ Cʜᴀᴛꜱ Oʀ Bᴏᴛꜱ Bʏ Uꜱɪɴɢ /settings__
 ► __Iꜰ Tʜᴇ **Fʀᴏᴍ Cʜᴀɴɴᴇʟ** Iꜱ Pʀɪᴠᴀᴛᴇ, Yᴏᴜʀ UꜱᴇʀBᴏᴛ Mᴜꜱᴛ Bᴇ A Mᴇᴍʙᴇʀ Iɴ Tʜᴇʀᴇ Oʀ Yᴏᴜʀ Bᴏᴛ Mᴜꜱᴛ Nᴇᴇᴅ Tᴏ Bᴇ Aᴅᴍɪɴ Iɴ Tʜᴇʀᴇ Aʟꜱᴏ__
 ► __Tʜᴇɴ Uꜱᴇ /forward Tᴏ Fᴏʀᴡᴀʀᴅ Mᴇꜱꜱᴀɢᴇꜱ, Wʜᴇʀᴇ Iᴛ Aꜱᴋ Fᴏʀ Sᴏᴜʀᴄᴇ Cʜᴀᴛ Tᴏ Fᴏᴡᴀʀᴅ__"""
   
@@ -114,7 +114,7 @@ Bᴇꜰᴏʀ Fᴏʀᴡᴀʀᴅɪɴɢ Tʜᴇ Mᴇꜱꜱᴀɢᴇꜱ Cʟɪᴄᴋ T�
 <i>° [{botname}](t.me/{botuname}) Mᴜꜱᴛ Bᴇ Aᴅᴍɪɴ Iɴ <b>Tᴀʀɢᴇᴛ Cʜᴀᴛ</b></i> (<code>{to_chat}</code>)
 <i>° Iꜰ Tʜᴇ <b>Sᴏᴜʀᴄᴇ Cʜᴀᴛ</b> Iꜱ Pʀɪᴠᴀᴛᴇ Yᴏᴜʀ Userbot Mᴜꜱᴛ Bᴇ Mᴇᴍʙᴇʀ Or Yᴏᴜʀ Bᴏᴛ Mᴜꜱᴛ Bᴇ Aᴅᴍɪɴ Iɴ Tʜᴇʀᴇ Aʟꜱᴏ</i>
 
-<b>If Tʜᴇ Above Iꜱ Cʜᴇᴄᴋᴇᴅ Tʜᴇɴ Tʜᴇ Yᴇꜱ Bᴜᴛᴛᴏɴ Cᴀɴ Bᴇ Cʟɪᴄᴋᴇᴅ</b>"""
+<b>Iꜰ Tʜᴇ Aʙᴏᴠᴇ Iꜱ Cʜᴇᴄᴋᴇᴅ Tʜᴇɴ Tʜᴇ Yᴇꜱ Bᴜᴛᴛᴏɴ Cᴀɴ Bᴇ Cʟɪᴄᴋᴇᴅ</b>"""
 
 
 
