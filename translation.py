@@ -11,11 +11,12 @@ import os
 from config import Config
 
 class Translation(object):
-  START_TXT = """<b>Hᴇʏ {}
+  START_TXT = """Hᴇʏ {}
 
-➻ I Aᴍ Δ Aᴅᴠᴀɴᴄᴇᴅ Aᴜᴛᴏ Fᴏʀᴡᴀʀᴅ Bᴏᴛ.
-➻ I Cᴀɴ Fᴏʀᴡᴀʀᴅ Aʟʟ Mᴇꜱꜱᴀɢᴇꜱ Fʀᴏᴍ Cʜᴀɴɴᴇʟ To Aɴᴏᴛʜᴇʀ Cʜᴀɴɴᴇʟ 
-➻ Cʟɪᴄᴋ Hᴇʟᴩ To Kɴᴏᴡ Moʀᴇ Aʙᴏᴜᴛ Mᴇ</b>"""
+<i>I'ᴍ ᴀ Aᴅᴠᴀɴᴄᴇᴅ Aᴜᴛᴏ Fᴏʀᴡᴀʀᴅ Bᴏᴛ
+I ᴄᴀɴ ғᴏʀᴡᴀʀᴅ ᴀʟʟ ᴍᴇssᴀɢᴇ ғʀᴏᴍ ᴏɴᴇ ᴄʜᴀɴɴᴇʟ ᴛᴏ ᴀɴᴏᴛʜᴇʀ ᴄʜᴀɴɴᴇʟ ᴡɪᴛʜ ᴀᴍᴀᴢɪɴɢ ꜰᴇᴀᴛᴜʀᴇs.</i>
+
+Cʟɪᴄᴋ Hᴇʟᴘ Fᴏʀ Kɴᴏᴡ Mᴇ<b></b>"""
 
 
   HELP_TXT = """<b><u>⋈ Hᴇʟᴩ</b></u>
