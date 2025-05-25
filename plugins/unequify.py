@@ -73,7 +73,7 @@ async def unequify(client, message):
             ]
         )
 
-        text = "**Sᴏʀʀʏ, ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟꜱ, ᴩʟᴇᴀꜱᴇ ᴅᴏ ꜱᴏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ.. ⚡ .**"
+        text = "**Sᴏʀʀʏ, ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟꜱ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ꜰᴇᴀᴛᴜʀᴇ, ᴩʟᴇᴀꜱᴇ ᴅᴏ ꜱᴏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ.. ⚡ .**"
         return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
         
    target = await client.ask(user_id, text="Forward The Last Message From Target Chat Or Send Last Message Link.\n/cancel - To Cancel This Process")
