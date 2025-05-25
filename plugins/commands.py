@@ -26,8 +26,8 @@ main_buttons = [[
         ],[
         InlineKeyboardButton('⊛ Hᴇʟᴩ ⊛', callback_data='help'),
         InlineKeyboardButton('✧ Aʙᴏᴜᴛ ✧', callback_data='about')
-       # ],[
-     #   InlineKeyboardButton('🧑‍💻 Dᴇᴠᴇʟ 🧑‍💻', url='https://t.me/Robot')
+        ],[
+        InlineKeyboardButton('⚝ Mᴏʀᴇ Bᴏᴛꜱ ⚝', url='https://t.me/Bot_Cracker/17')
         ]]
 
 
