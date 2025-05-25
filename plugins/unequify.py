@@ -10,6 +10,7 @@
 import re, asyncio
 from database import db
 from config import temp
+from .public import SYD_CHANNELS
 from .test import CLIENT , start_clone_bot
 from translation import Translation
 from pyrogram import Client, filters 
@@ -39,6 +40,42 @@ async def unequify(client, message):
    _bot = await db.get_bot(user_id)
    if not _bot or _bot['is_bot']:
       return await message.reply("Nᴇᴇᴅ UꜱᴇʀBᴏᴛ To Foʀ Tʜɪꜱ Pʀᴏᴄᴇꜱꜱ. Pʟᴇᴀꜱᴇ Aᴅᴅ A UꜱᴇʀBᴏᴛ Uꜱɪɴɢ /settings")
+   for channel in SYD_CHANNELS:
+        try:
+            user = await bot.get_chat_member(channel, message.from_user.id)
+            if user.status in {"kicked", "left"}:
+                not_joined_channels.append(channel)
+        except UserNotParticipant:
+            not_joined_channels.append(channel)
+            
+    if not_joined_channels:
+        buttons = [
+            [
+                InlineKeyboardButton(
+                    text=f"✧ Jᴏɪɴ {channel.capitalize().replace("_", " ")}✧", url=f"https://t.me/{channel}"
+                )
+            ]
+        for channel in not_joined_channels
+        ]
+        buttons.append(
+            [
+                InlineKeyboardButton(
+                    text="✧ Jᴏɪɴ Bᴀᴄᴋ Uᴩ ✧", url="https://t.me/+0Zi1FC4ulo8zYzVl"
+
+                )
+            ]
+        )
+        buttons.append(
+            [
+                InlineKeyboardButton(
+                    text="☑ ᴊᴏɪɴᴇᴅ ☑", callback_data="check_subscription"
+                )
+            ]
+        )
+
+        text = "**Sᴏʀʀʏ, ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴊᴏɪɴ ɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟꜱ, ᴩʟᴇᴀꜱᴇ ᴅᴏ ꜱᴏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ.. ⚡ .**"
+        return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
+        
    target = await client.ask(user_id, text="Forward The Last Message From Target Chat Or Send Last Message Link.\n/cancel - To Cancel This Process")
    if target.text.startswith("/"):
       return await message.reply("Process Cancelled !")
