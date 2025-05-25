@@ -20,7 +20,7 @@ from pyrogram.errors.exceptions.not_acceptable_406 import ChannelPrivate as Priv
 from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, ChatAdminRequired, UsernameInvalid, UsernameNotModified, ChannelPrivate
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
  
-SYD_CHANNELS = ["Bot_Cracker", "Mod_Moviez_X"]
+SYD_CHANNELS = ["Bot_Cracker", "Mod_Moviez_X", "Mrsyd_tg"]
 
 # async def not_subscribed(_, __, message):
     #for channel in SYD_CHANNELS:
