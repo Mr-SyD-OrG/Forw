@@ -48,33 +48,33 @@ async def unequify(client, message):
         except UserNotParticipant:
             not_joined_channels.append(channel)
             
-    if not_joined_channels:
-        buttons = [
-            [
-                InlineKeyboardButton(
-                    text=f"✧ Jᴏɪɴ {channel.capitalize().replace("_", " ")}✧", url=f"https://t.me/{channel}"
-                )
-            ]
-        for channel in not_joined_channels
-        ]
-        buttons.append(
-            [
-                InlineKeyboardButton(
-                    text="✧ Jᴏɪɴ Bᴀᴄᴋ Uᴩ ✧", url="https://t.me/+0Zi1FC4ulo8zYzVl"
+   if not_joined_channels:
+       buttons = [
+           [
+               InlineKeyboardButton(
+                   text=f"✧ Jᴏɪɴ {channel.capitalize().replace("_", " ")}✧", url=f"https://t.me/{channel}"
+               )
+           ]
+       for channel in not_joined_channels
+       ]
+       buttons.append(
+           [
+               InlineKeyboardButton(
+                   text="✧ Jᴏɪɴ Bᴀᴄᴋ Uᴩ ✧", url="https://t.me/+0Zi1FC4ulo8zYzVl"
 
-                )
-            ]
-        )
-        buttons.append(
-            [
-                InlineKeyboardButton(
-                    text="☑ ᴊᴏɪɴᴇᴅ ☑", callback_data="check_subscription"
-                )
-            ]
-        )
+               )
+           ]
+       )
+       buttons.append(
+           [
+               InlineKeyboardButton(
+                   text="☑ ᴊᴏɪɴᴇᴅ ☑", callback_data="check_subscription"
+               )
+           ]
+       )
 
-        text = "**Sᴏʀʀʏ, ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟꜱ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ꜰᴇᴀᴛᴜʀᴇ, ᴩʟᴇᴀꜱᴇ ᴅᴏ ꜱᴏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ.. ⚡ .**"
-        return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
+       text = "**Sᴏʀʀʏ, ʏᴏᴜ ʜᴀᴠᴇ ᴛᴏ ᴊᴏɪɴ ɪɴ ᴏᴜʀ ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟꜱ ᴛᴏ ᴜꜱᴇ ᴛʜɪꜱ ꜰᴇᴀᴛᴜʀᴇ, ᴩʟᴇᴀꜱᴇ ᴅᴏ ꜱᴏ ᴛᴏ ᴄᴏɴᴛɪɴᴜᴇ.. ⚡ .**"
+       return await message.reply_text(text=text, reply_markup=InlineKeyboardMarkup(buttons))
         
    target = await client.ask(user_id, text="Forward The Last Message From Target Chat Or Send Last Message Link.\n/cancel - To Cancel This Process")
    if target.text.startswith("/"):
