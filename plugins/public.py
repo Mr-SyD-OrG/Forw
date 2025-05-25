@@ -57,7 +57,7 @@ async def run(bot, message):
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=f"✧ Jᴏɪɴ ✧", url=f"https://t.me/{channel}"
+                    text=f"✧ Jᴏɪɴ {channel.capitalize().replace("_", " ")}✧", url=f"https://t.me/{channel}"
                 )
             ]
         for channel in not_joined_channels
@@ -169,7 +169,7 @@ async def check_subscription(client, callback_query: CallbackQuery):
         buttons = [
             [
                 InlineKeyboardButton(
-                    text=f"✧ Jᴏɪɴ {channel.capitalize()} ✧",
+                    text=f"✧ Jᴏɪɴ {channel.capitalize().replace("_", " ")} ✧",
                     url=f"https://t.me/{channel}",
                 )
             ]
