@@ -152,10 +152,10 @@ async def check_subscription(client, callback_query: CallbackQuery):
             not_joined_channels.append(channel)
 
     if not not_joined_channels:
-        await callback_query.reply("🎊")
         await callback_query.message.edit_text(
             "**Tʜᴀɴᴋꜱ ✨, Yᴏᴜ ʜᴀᴠᴇ ᴊᴏɪɴᴇᴅ ᴏɴ ᴀʟʟ ᴛʜᴇ ʀᴇqᴜɪʀᴇᴅ ᴄʜᴀɴɴᴇʟꜱ. \nCʟɪᴄᴋ ᴏɴ 😊 /forward ɴᴏᴡ ᴛᴏ ꜱᴛᴀʀᴛ ᴛʜᴇ ᴩʀᴏᴄᴇꜱꜱ.....⚡**"
         )
+        await callback_query.reply("🎊")
     else:
         buttons = [
             [
