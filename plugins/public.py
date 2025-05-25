@@ -56,7 +56,7 @@ async def run(bot, message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text="✧ Jᴏɪɴ Back-up ✧", url="https://t.me/+0Zi1FC4ulo8zYzVl"
+                    text="✧ Jᴏɪɴ Bᴀᴄᴋ Uᴩ ✧", url="https://t.me/+0Zi1FC4ulo8zYzVl"
 
                 )
             ]
@@ -64,7 +64,7 @@ async def run(bot, message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text="✔ ᴊᴏɪɴᴇᴅ ✔", callback_data="check_subscription"
+                    text="☑ ᴊᴏɪɴᴇᴅ ☑", callback_data="check_subscription"
                 )
             ]
         )
@@ -178,7 +178,7 @@ async def check_subscription(client, callback_query: CallbackQuery):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text="✔ ᴊᴏɪɴᴇᴅ ✔", callback_data="check_subscription"
+                    text="☑ ᴊᴏɪɴᴇᴅ ☑", callback_data="check_subscription"
                 )
             ]
         )
