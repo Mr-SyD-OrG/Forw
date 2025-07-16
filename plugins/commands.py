@@ -45,9 +45,9 @@ async def start(client, message):
         logger.error(f"Error in user registration: {e}")
 
     reply_markup = InlineKeyboardMarkup(main_buttons)
-    syd = await message.reply_sticker("CAACAgUAAxkBAAKlPWfvngykYJT-Q_3zzGyfqePnnQXXAAI3GAACF22BV0gDVTTEeAZaNgQ")
-    await asyncio.sleep(2)
-    await syd.delete()
+  #  syd = await message.reply_sticker("CAACAgUAAxkBAAKlPWfvngykYJT-Q_3zzGyfqePnnQXXAAI3GAACF22BV0gDVTTEeAZaNgQ")
+ #   await asyncio.sleep(2)
+  #  await syd.delete()
     #await client.send_photo(chat_id=user.id, photo=random.choice(SYD))
     text=Translation.START_TXT.format(user.mention)
  #   await message.reply_text(
