@@ -48,10 +48,16 @@ async def start(client, message):
     syd = await message.reply_sticker("CAACAgUAAxkBAAKlPWfvngykYJT-Q_3zzGyfqePnnQXXAAI3GAACF22BV0gDVTTEeAZaNgQ")
     await asyncio.sleep(2)
     await syd.delete()
-    await client.send_photo(chat_id=user.id, photo=random.choice(SYD))
+    #await client.send_photo(chat_id=user.id, photo=random.choice(SYD))
     text=Translation.START_TXT.format(user.mention)
-    await message.reply_text(
-        text=text,
+ #   await message.reply_text(
+     #   text=text,
+      #  reply_markup=reply_markup,
+  #      quote=True
+  #  )
+    await message.reply_photo(
+        photo=random.choice(SYD),
+        caption=text,
         reply_markup=reply_markup,
         quote=True
     )
