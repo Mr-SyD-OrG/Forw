@@ -58,8 +58,8 @@ async def start(client, message):
     await message.reply_photo(
         photo=random.choice(SYD),
         caption=text,
-        reply_markup=reply_markup,
-        quote=True
+        reply_markup=reply_markup
+      #  quote=True
     )
 
 
