@@ -1,8 +1,6 @@
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+# MrSyD 🧩
+# By @Bot_Cracker 🎋
+# Developer @syd_xyz
 
 
 
@@ -148,8 +146,6 @@ async def unequify(client, message):
 
 
 
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+# MrSyD 🧩
+# By @Bot_Cracker 🎋
+# Developer @syd_xyz
