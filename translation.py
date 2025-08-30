@@ -1,8 +1,6 @@
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+# MrSyD
+# Telegram Channel @Bot_Cracker
+# Developer @syd_xyz
 
 
 
@@ -125,8 +123,6 @@ Bᴇꜰᴏʀ Fᴏʀᴡᴀʀᴅɪɴɢ Tʜᴇ Mᴇꜱꜱᴀɢᴇꜱ Cʟɪᴄᴋ T�
 
 
 
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+# MrSyD
+# Telegram Channel @Bot_Cracker
+# Developer @syd_xyz
