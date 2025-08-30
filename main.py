@@ -1,8 +1,6 @@
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+# MrSyD
+# Telegram Channel @Bot_Cracker
+# Developer @syd_xyz
 
 
 
@@ -11,14 +9,12 @@ from bot import Bot
 app = Bot()
 app.run()
 
+# Credited: Jishu Developer 
 
 
 
 
 
-
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+# MrSyD
+# Telegram Channel @Bot_Cracker
+# Developer @syd_xyz
