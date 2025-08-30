@@ -1,8 +1,6 @@
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+# MrSyD
+# Telegram Channel @Bot_Cracker
+# Developer @syd_xyz
 
 
 
@@ -79,8 +77,6 @@ def get_readable_time(seconds: int) -> str:
 
 
 
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+# MrSyD
+# Telegram Channel @Bot_Cracker
+# Developer @syd_xyz
