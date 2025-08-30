@@ -133,10 +133,7 @@ async def run(bot, message):
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
-    try:
-        await bot.send_message(1733124290, f"From {chat_id}, User: {user_id} Started Forward")
-    except:
-        pass
+    
     STS(forward_id).store(chat_id, toid, int(skipno.text), int(last_msg_id))
 
 
