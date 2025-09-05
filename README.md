@@ -1,4 +1,3 @@
-#<img src="https://graph.org/file/7f7dcc89135e7d6c64bbb.jpg" alt="logo" target="/blank">
 
 <h1 align="center">
  <b><a href="https://t.me/MadflixForwardBot" target="/blank"> Ultra Forward Bot </a></>
