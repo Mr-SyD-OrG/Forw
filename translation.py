@@ -48,7 +48,7 @@ class Translation(object):
   ABOUT_TXT = """<b>⋉ Mʏ Nᴀᴍᴇ :</b> {}
 <b>⋉ Lᴀɴɢᴜᴀɢᴇ :</b> <a href='https://t.me/+0Zi1FC4ulo8zYzVl'>Sᴀᴍᴇ ᴀꜱ!</a>
 <b>⋉ Lɪʙʀᴀʀʏ :</b> <a href='https://t.me/nt_Backup'>Bᴀᴄᴋ-Uᴩ 🕯️</a>
-<b>⋉ Sᴇʀᴠᴇʀ :</b> <a href='https://t.me/+7P5-bLWSuPA5NmFl'>TG 🪄</a>
+<b>⋉ Sᴇʀᴠᴇʀ :</b> <a href='https://t.me/+nwxHOizrSXQzZTI1'>TG 🪄</a>
 <b>⋉ Cʜᴀɴɴᴇʟ :</b> <a href='https://t.me/Bot_Cracker'>Bᴏᴛ Cʀᴀᴄᴋᴇʀ 🎶</a>
 <b>⋉ Dᴇᴠᴇʟᴏᴩᴇʀ :</b> <a href='https://t.me/Syd_XyZ'>ᴍʀ. ꜱʏᴅ 🌧️</a>"""
   
