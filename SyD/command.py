@@ -1,4 +1,5 @@
 from pyrogram import *
+from pyrogram import enums
 from config import Config
 import asyncio
 import random
