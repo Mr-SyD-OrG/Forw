@@ -103,7 +103,7 @@ async def setCap(bot, message):
         return await message.reply(f"Yᴏᴜʀ Nᴇᴡ Cᴀᴘᴛɪᴏɴ Is: {caption}")
 
 @Client.on_message(filters.command("see_cap"))
-async def setCap(bot, message):
+async def seeCap(bot, message):
     if not message.chat.type == enums.ChatType.CHANNEL:
         await message.reply("Pʟᴇᴀꜱᴇ ꜱᴇɴᴅ ɪᴛ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ, ɪɴ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴡᴏʀᴋ, ʙʏ ᴇᴅɪᴛɪɴɢ ᴄᴀᴩᴛɪᴏɴꜱ ❕")
         return
