@@ -119,16 +119,16 @@ async def setCap(bot, message):
 
 
 @Client.on_message(filters.command("del_cap"))
-async def delCap(_, msg):
+async def delCap(_, message):
     if not message.chat.type == enums.ChatType.CHANNEL:
         await message.reply("Pʟᴇᴀꜱᴇ ꜱᴇɴᴅ ɪᴛ ɪɴ ᴛʜᴇ ᴄʜᴀɴɴᴇʟ, ɪɴ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴍᴀᴋᴇ ᴍᴇ ᴡᴏʀᴋ, ʙʏ ᴇᴅɪᴛɪɴɢ ᴄᴀᴩᴛɪᴏɴꜱ ❕")
         return
-    chnl_id = msg.chat.id
+    chnl_id = message.chat.id
     try:
         await chnl_ids.delete_one({"chnl_id": chnl_id})
-        return await msg.reply("<b><i>✓ Sᴜᴄᴄᴇssғᴜʟʟʏ... Dᴇʟᴇᴛᴇᴅ Yᴏᴜʀ Cᴀᴘᴛɪᴏɴ Nᴏᴡ I ᴀᴍ Usɪɴɢ Mʏ Dᴇғᴀᴜʟᴛ Cᴀᴘᴛɪᴏɴ </i></b>")
+        return await message.reply("<b><i>✓ Sᴜᴄᴄᴇssғᴜʟʟʏ... Dᴇʟᴇᴛᴇᴅ Yᴏᴜʀ Cᴀᴘᴛɪᴏɴ Nᴏᴡ I ᴀᴍ Usɪɴɢ Mʏ Dᴇғᴀᴜʟᴛ Cᴀᴘᴛɪᴏɴ </i></b>")
     except Exception as e:
-        e_val = await msg.replay(f"ERR I GOT: {e}")
+        e_val = await message.replay(f"ERR I GOT: {e}")
         await asyncio.sleep(5)
         await e_val.delete()
         return
