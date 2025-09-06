@@ -76,6 +76,7 @@ class Translation(object):
 <b>🔁 Fɪʟᴛᴇʀᴇᴅ Mᴇꜱꜱᴀɢᴇ :</b> <code>{}</code>
 <b>📊 Cᴜʀʀᴇɴᴛ Sᴛᴀᴛᴜꜱ :</b> <code>{}</code>
 <b>🔥 Pᴇʀᴄᴇɴᴛᴀɢᴇ :</b> <code>{}</code> %
+<b>⏰ Eᴛᴀ :</b> <code>{}</code>
 
 {}
 """
