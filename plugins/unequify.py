@@ -5,6 +5,7 @@
 
 
 from pyrogram.errors import UserNotParticipant
+from pyrogram.errors import FloodWait
 import re, asyncio
 from database import db
 from config import temp
@@ -117,8 +118,11 @@ async def unequify(client, message):
          if temp.CANCEL.get(user_id) == True:
              await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Cᴀɴᴄᴇʟʟᴇᴅ"), reply_markup=COMPLETED_BTN)
              return await bot.stop()
-         
+         await asyncio.sleep(0.8)
          try:
+             message = await bot.get_messages(chat_id, msg_id)
+         except FloodWait as e:
+             await asyncio.sleep(e.value)  # wait required time
              message = await bot.get_messages(chat_id, msg_id)
          except Exception:
              continue  # skip if deleted/unavailable
