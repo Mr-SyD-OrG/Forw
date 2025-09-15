@@ -132,7 +132,7 @@ async def unequify(client, message):
              continue
          
          file = message.document
-         file_id = unpack_file_id(file.file_id) 
+         file_id = file.file_unique_id 
          if file_id in MESSAGES:
              DUPLICATE.append(message.id)
          else:
