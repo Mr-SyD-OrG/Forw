@@ -36,6 +36,7 @@ async def unequify(client, message):
    if temp.lock.get(user_id) and str(temp.lock.get(user_id))=="True":
       return await message.reply("Pʟᴇᴀꜱᴇ Wᴀɪᴛ Uɴᴛɪʟ Pʀᴇᴠɪᴏᴜꜱ Tᴀꜱᴋ Iꜱ Cᴏᴍᴩʟᴇᴛᴇᴅ")
    _bot = await db.get_bot(user_id)
+   not_joined_channels = []
    if not _bot:
       return await message.reply("Nᴇᴇᴅ UꜱᴇʀBᴏᴛ To Foʀ Tʜɪꜱ Pʀᴏᴄᴇꜱꜱ. Pʟᴇᴀꜱᴇ Aᴅᴅ A UꜱᴇʀBᴏᴛ Uꜱɪɴɢ /settings")
    for channel in SYD_CHANNELS:
