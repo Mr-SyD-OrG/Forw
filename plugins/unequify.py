@@ -117,27 +117,40 @@ async def unequify(client, message):
    try:
      await message.reply("1")
      await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Progressing"), reply_markup=CANCEL_BTN)
-     async for message in bot.search_messages(chat_id=chat_id, filter=enums.MessagesFilter.DOCUMENT):
-        if temp.CANCEL.get(user_id) == True:
-           await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Cancelled"), reply_markup=COMPLETED_BTN)
-           return await bot.stop()
-        file = message.document
-        file_id = unpack_new_file_id(file.file_id) 
-        if file_id in MESSAGES:
-           DUPLICATE.append(message.id)
-        else:
-           MESSAGES.append(file_id)
-        total += 1
-        if total %10000 == 0:
-           await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Progressing"), reply_markup=CANCEL_BTN)
-        if len(DUPLICATE) >= 100:
-           await bot.delete_messages(chat_id, DUPLICATE)
-           deleted += 100
-           await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Cancelled"), reply_markup=CANCEL_BTN)
-           DUPLICATE = []
+     # Instead of search_messages, loop through IDs
+     for msg_id in range(1, last_msg_id + 1):
+         if temp.CANCEL.get(user_id) == True:
+             await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Cancelled"), reply_markup=COMPLETED_BTN)
+             return await bot.stop()
+         
+         try:
+             message = await bot.get_messages(chat_id, msg_id)
+         except Exception:
+             continue  # skip if deleted/unavailable
+         
+         if not message or not message.document:
+             continue
+         
+         file = message.document
+         file_id = unpack_new_file_id(file.file_id) 
+         if file_id in MESSAGES:
+             DUPLICATE.append(message.id)
+         else:
+             MESSAGES.append(file_id)
+         
+         total += 1
+         if total % 10000 == 0:
+             await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Progressing"), reply_markup=CANCEL_BTN)
+         
+         if len(DUPLICATE) >= 100:
+             await bot.delete_messages(chat_id, DUPLICATE)
+             deleted += len(DUPLICATE)
+             await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Progressing"), reply_markup=CANCEL_BTN)
+             DUPLICATE = []
+     
      if DUPLICATE:
-        await bot.delete_messages(chat_id, DUPLICATE)
-        deleted += len(DUPLICATE)
+         await bot.delete_messages(chat_id, DUPLICATE)
+         deleted += len(DUPLICATE)
    except Exception as e:
        temp.lock[user_id] = False 
        await sts.edit(f"**Error**\n\n`{e}`")
