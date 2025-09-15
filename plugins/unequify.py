@@ -37,7 +37,7 @@ async def unequify(client, message):
    _bot = await db.get_bot(user_id)
    not_joined_channels = []
    if not _bot:
-      return await message.reply("Nᴇᴇᴅ UꜱᴇʀBᴏᴛ To Foʀ Tʜɪꜱ Pʀᴏᴄᴇꜱꜱ. Pʟᴇᴀꜱᴇ Aᴅᴅ A UꜱᴇʀBᴏᴛ Uꜱɪɴɢ /settings")
+      return await message.reply("Nᴇᴇᴅ A Bᴏᴛ Foʀ Tʜɪꜱ Pʀᴏᴄᴇꜱꜱ. Pʟᴇᴀꜱᴇ Aᴅᴅ A Bᴏᴛ Uꜱɪɴɢ /settings")
    for channel in SYD_CHANNELS:
         try:
             user = await client.get_chat_member(channel, message.from_user.id)
@@ -76,7 +76,7 @@ async def unequify(client, message):
         
    target = await client.ask(user_id, text="Forward The Last Message From Target Chat Or Send Last Message Link.\n/cancel - To Cancel This Process")
    if target.text.startswith("/"):
-      return await message.reply("Process Cancelled !")
+      return await message.reply("Pʀᴏᴄᴇꜱꜱ Cᴀɴᴄᴇʟʟᴇᴅ !")
    elif target.text:
       regex = re.compile(r"(https://)?(t\.me/|telegram\.me/|telegram\.dog/)(c/)?(\d+|[a-zA-Z_0-9]+)/(\d+)$")
       match = regex.match(target.text.replace("?single", ""))
