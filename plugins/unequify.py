@@ -108,9 +108,13 @@ async def unequify(client, message):
        return await bot.stop()
    MESSAGES = []
    DUPLICATE = []
+   await message.reply("1")
    total=deleted=0
+   await message.reply("1")
    temp.lock[user_id] = True
+   await message.reply("1")
    try:
+     await message.reply("1")
      await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Progressing"), reply_markup=CANCEL_BTN)
      async for message in bot.search_messages(chat_id=chat_id, filter="document"):
         if temp.CANCEL.get(user_id) == True:
