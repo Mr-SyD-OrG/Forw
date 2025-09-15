@@ -134,7 +134,7 @@ async def unequify(client, message):
              MESSAGES.append(file_id)
          
          total += 1
-         if total % 10000 == 0:
+         if total % 1000 == 0:
              await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Pʀᴏɢʀᴇꜱꜱɪɴɢ"), reply_markup=CANCEL_BTN)
          
          if len(DUPLICATE) >= 100:
