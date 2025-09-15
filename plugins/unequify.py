@@ -109,7 +109,8 @@ async def unequify(client, message):
    MESSAGES = []
    DUPLICATE = []
    await message.reply("1")
-   total=deleted=0
+   total=0
+   deleted=0
    await message.reply("1")
    temp.lock[user_id] = True
    await message.reply("1")
