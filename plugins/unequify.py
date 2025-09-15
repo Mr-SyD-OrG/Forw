@@ -107,19 +107,15 @@ async def unequify(client, message):
        return await bot.stop()
    MESSAGES = []
    DUPLICATE = []
-   await message.reply("1")
    total=0
    deleted=0
-   await message.reply("1")
    temp.lock[user_id] = True
-   await message.reply("1")
    try:
-     await message.reply("1")
-     await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Progressing"), reply_markup=CANCEL_BTN)
+     await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Pʀᴏɢʀᴇꜱꜱɪɴɢ""), reply_markup=CANCEL_BTN)
      # Instead of search_messages, loop through IDs
      for msg_id in range(1, last_msg_id + 1):
          if temp.CANCEL.get(user_id) == True:
-             await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Cancelled"), reply_markup=COMPLETED_BTN)
+             await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Cᴀɴᴄᴇʟʟᴇᴅ"), reply_markup=COMPLETED_BTN)
              return await bot.stop()
          
          try:
@@ -139,12 +135,12 @@ async def unequify(client, message):
          
          total += 1
          if total % 10000 == 0:
-             await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Progressing"), reply_markup=CANCEL_BTN)
+             await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Pʀᴏɢʀᴇꜱꜱɪɴɢ"), reply_markup=CANCEL_BTN)
          
          if len(DUPLICATE) >= 100:
              await bot.delete_messages(chat_id, DUPLICATE)
              deleted += len(DUPLICATE)
-             await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Progressing"), reply_markup=CANCEL_BTN)
+             await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Pʀᴏɢʀᴇꜱꜱɪɴɢ"), reply_markup=CANCEL_BTN)
              DUPLICATE = []
      
      if DUPLICATE:
@@ -155,7 +151,7 @@ async def unequify(client, message):
        await sts.edit(f"**Error**\n\n`{e}`")
        return await bot.stop()
    temp.lock[user_id] = False
-   await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Completed"), reply_markup=COMPLETED_BTN)
+   await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Cᴏᴍᴩʟᴇᴛᴇᴅ"), reply_markup=COMPLETED_BTN)
    await bot.stop()
    
 
