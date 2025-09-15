@@ -41,7 +41,7 @@ async def unequify(client, message):
       return await message.reply("Nᴇᴇᴅ UꜱᴇʀBᴏᴛ To Foʀ Tʜɪꜱ Pʀᴏᴄᴇꜱꜱ. Pʟᴇᴀꜱᴇ Aᴅᴅ A UꜱᴇʀBᴏᴛ Uꜱɪɴɢ /settings")
    for channel in SYD_CHANNELS:
         try:
-            user = await bot.get_chat_member(channel, message.from_user.id)
+            user = await client.get_chat_member(channel, message.from_user.id)
             if user.status in {"kicked", "left"}:
                 not_joined_channels.append(channel)
         except UserNotParticipant:
