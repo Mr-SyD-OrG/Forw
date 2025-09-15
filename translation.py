@@ -96,10 +96,8 @@ class Translation(object):
   DUPLICATE_TEXT = """<b><u>UɴᴇQᴜɪꜰʏ Sᴛᴀᴛᴜꜱ</u></b>
 
 <b>🕵 Fᴇᴛᴄʜᴇᴅ Fɪʟᴇꜱ :</b> <code>{}</code>
-
 <b>👥 Dᴜʙʟɪᴄᴀᴛᴇ Dᴇʟᴇᴛᴇᴅ :</b> <code>{}</code>
-
-{}
+<b>📊 Sᴛᴀᴛꜱ :</b><code>{}</code>
 """
   DOUBLE_CHECK = """<b><u>Dᴏᴜʙʟᴇ Cʜᴇᴄᴋɪɴɢ</u></b>
   
