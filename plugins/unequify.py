@@ -11,7 +11,7 @@ from config import temp
 from .public import SYD_CHANNELS
 from .test import CLIENT , start_clone_bot
 from translation import Translation
-from pyrogram import Client, filters 
+from pyrogram import Client, filters, enums
 #from pyropatch.utils import unpack_new_file_id
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
@@ -117,7 +117,7 @@ async def unequify(client, message):
    try:
      await message.reply("1")
      await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Progressing"), reply_markup=CANCEL_BTN)
-     async for message in bot.search_messages(chat_id=chat_id, filter="document"):
+     async for message in bot.search_messages(chat_id=chat_id, filter=enums.MessagesFilter.DOCUMENT):
         if temp.CANCEL.get(user_id) == True:
            await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Cancelled"), reply_markup=COMPLETED_BTN)
            return await bot.stop()
