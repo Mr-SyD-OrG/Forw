@@ -111,7 +111,7 @@ async def unequify(client, message):
    deleted=0
    temp.lock[user_id] = True
    try:
-     await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Pʀᴏɢʀᴇꜱꜱɪɴɢ""), reply_markup=CANCEL_BTN)
+     await sts.edit(Translation.DUPLICATE_TEXT.format(total, deleted, "Pʀᴏɢʀᴇꜱꜱɪɴɢ"), reply_markup=CANCEL_BTN)
      # Instead of search_messages, loop through IDs
      for msg_id in range(1, last_msg_id + 1):
          if temp.CANCEL.get(user_id) == True:
