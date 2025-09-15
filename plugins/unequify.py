@@ -12,7 +12,7 @@ from .public import SYD_CHANNELS
 from .test import CLIENT , start_clone_bot
 from translation import Translation
 from pyrogram import Client, filters, enums
-#from pyropatch.utils import unpack_new_file_id
+from pyropatch.utils import unpack_new_file_id
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 CLIENT = CLIENT()
