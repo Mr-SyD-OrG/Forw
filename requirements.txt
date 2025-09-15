@@ -4,4 +4,3 @@ TgCrypto
 Dnspython
 aiohttp
 pytz
-pyropatch
