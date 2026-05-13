@@ -12,7 +12,7 @@ from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, ChatAdmin
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
  
 SYD_CHANNELS = ["Bot_Cracker", "Mod_Moviez_X", "MrSyD_Tg"]
-
+PREMIUM = [1733124290]
 # async def not_subscribed(_, __, message):
     #for channel in SYD_CHANNELS:
        # try:
@@ -108,6 +108,20 @@ async def run(bot, message):
     else:
         await message.reply_text("Invalid !")
         return 
+    if message.chat.id in PREMIUM:
+        replyto = await bot.ask(message.chat.id, Translation.REPLY_MSG, reply_markup=ReplyKeyboardRemove())
+        if replyto.text and replyto.text.startswith('/'):
+            await message.reply(Translation.CANCEL)
+            return
+        if replyto.text:
+            try:
+                syd = int(replyto.text)
+            except ValueError:
+                syd = 0
+                await message.reply_text("Invalid reply id! Skipping feature.")
+        else:
+            syd = 0
+            await message.reply_text("Invalid ! Skipping Feature")
     try:
         title = (await bot.get_chat(chat_id)).title
   #  except ChannelInvalid:
@@ -134,7 +148,7 @@ async def run(bot, message):
         reply_markup=reply_markup
     )
     
-    STS(forward_id).store(chat_id, toid, int(skipno.text), int(last_msg_id))
+    STS(forward_id).store(chat_id, toid, int(skipno.text), int(last_msg_id), int(syd))
 
 
 
