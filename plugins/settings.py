@@ -574,6 +574,9 @@ async def next_filters_buttons(user_id):
        InlineKeyboardButton('📌 Kᴇʏᴡᴏʀᴅꜱ',
                     callback_data='settings#get_keyword')
        ],[
+       InlineKeyboardButton('Tᴏᴩɪᴄ 🌿',
+                    callback_data='topic')
+       ],[
        InlineKeyboardButton('⇇ Bᴀᴄᴋ', 
                     callback_data="settings#main")
        ]]
