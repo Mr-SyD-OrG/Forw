@@ -120,7 +120,18 @@ async def about(bot, query):
         parse_mode=enums.ParseMode.HTML,
     )
 
-
+@Client.on_callback_query(filters.regex("buy"))
+async def buy_cb(bot, query):
+    await message.reply_text(
+        "Mᴇꜱꜱᴀɢᴇ @syd_xyz 🌿.",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🌱 Oᴡɴᴇʀ 🌱", url="https://t.me/syd_xyz")]])
+    )
+@Client.on_message(filters.command("buy"))
+async def buy_cmd(bot, message):
+    await message.reply_text(
+        "Mᴇꜱꜱᴀɢᴇ @syd_xyz 🌿.",
+        reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("🌱 Oᴡɴᴇʀ 🌱", url="https://t.me/syd_xyz")]])
+    )
 
 @Client.on_callback_query(filters.regex(r'^status'))
 async def status(bot, query):
