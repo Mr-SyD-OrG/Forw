@@ -112,7 +112,18 @@ async def back(bot, query):
        text=Translation.START_TXT.format(
                 query.from_user.first_name))
 
-
+@Client.on_callback_query(filters.regex("topic"))
+async def topic_cb(bot, query):
+    await query.message.reply_text(
+        "<b>PREMUIM 🌿:\n\n\n</b>
+        "<b>◈ Tᴏ Sᴇɴᴅ Mᴇꜱꜱᴀɢᴇꜱ Tᴏ A Tᴏᴘɪᴄ, Sᴇɴᴅ Tʜᴇ Tᴏᴘɪᴄ Iᴅ Wʜᴇɴ Aꜱᴋᴇᴅ.\n\n</b>"
+        "<b>◈ Yᴏᴜ Cᴀɴ Gᴇᴛ Tʜᴇ Tᴏᴘɪᴄ Iᴅ Bʏ Fᴏʀᴡᴀʀᴅɪɴɢ A Mᴇꜱꜱᴀɢᴇ Fʀᴏᴍ Tʜᴇ Tᴏᴘɪᴄ.\n\n</b>"
+        "<b>◈ Tʜᴇ Bᴏᴛ Wɪʟʟ Sᴇɴᴅ Aʟʟ Mᴇꜱꜱᴀɢᴇꜱ Iɴꜱɪᴅᴇ Tʜᴀᴛ Sᴇʟᴇᴄᴛᴇᴅ Tᴏᴘɪᴄ.\n\n</b>"
+        "<b>◈ Iꜰ Yᴏᴜ Fᴀᴄᴇ Aɴʏ Pʀᴏʙʟᴇᴍ, Mᴇꜱꜱᴀɢᴇ @SyD_XyZ 🌿</b>",
+        reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🌿 Bᴜʏ Pʀᴇᴍɪᴜᴍ 🌿", url="https://t.me/syd_xyz")]]
+        )
+    )
 
 @Client.on_callback_query(filters.regex(r'^about'))
 async def about(bot, query):
