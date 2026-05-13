@@ -119,14 +119,18 @@ async def pub_(bot, message):
         await stop(client, user)
             
 async def copy(bot, msg, m, sts):
-   try:                                  
+   try:
+     kwargs = {}
+     if sts.get("reply_to") and sts.get("reply_to") != 0:
+        kwargs["reply_to_message_id"] = reply_id
      if msg.get("media") and msg.get("caption"):
         await bot.send_cached_media(
               chat_id=sts.get('TO'),
               file_id=msg.get("media"),
               caption=msg.get("caption"),
               reply_markup=msg.get('button'),
-              protect_content=msg.get("protect"))
+              protect_content=msg.get("protect"),
+              **kwargs)
      else:
         await bot.copy_message(
               chat_id=sts.get('TO'),
@@ -134,7 +138,8 @@ async def copy(bot, msg, m, sts):
               caption=msg.get("caption"),
               message_id=msg.get("msg_id"),
               reply_markup=msg.get('button'),
-              protect_content=msg.get("protect"))
+              protect_content=msg.get("protect"),
+              **kwargs)
    except FloodWait as e:
      await edit(m, 'Pʀᴏɢʀᴇꜱꜱɪɴɢ', e.value, sts)
      await asyncio.sleep(e.value)
