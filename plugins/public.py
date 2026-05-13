@@ -108,6 +108,7 @@ async def run(bot, message):
     else:
         await message.reply_text("Invalid !")
         return 
+    sydtxt = "Oɴʟʏ Fᴏʀ Pʀᴇᴍɪᴜᴍ Uꜱᴇʀꜱ, Tᴏ Bᴜʏ : /buy"
     if message.chat.id in PREMIUM:
         replyto = await bot.ask(message.chat.id, Translation.REPLY_MSG, reply_markup=ReplyKeyboardRemove())
         if replyto.text and replyto.text.startswith('/'):
@@ -122,6 +123,7 @@ async def run(bot, message):
         else:
             syd = 0
             await message.reply_text("Invalid ! Skipping Feature")
+        sydtxt = f"{syd} 🌿"
     try:
         title = (await bot.get_chat(chat_id)).title
   #  except ChannelInvalid:
@@ -143,7 +145,7 @@ async def run(bot, message):
     ]]
     reply_markup = InlineKeyboardMarkup(buttons)
     await message.reply_text(
-        text=Translation.DOUBLE_CHECK.format(botname=_bot['name'], botuname=_bot['username'], from_chat=title, to_chat=to_title, skip=skipno.text),
+        text=Translation.DOUBLE_CHECK.format(botname=_bot['name'], botuname=_bot['username'], from_chat=title, to_chat=to_title, skip=skipno.text, syd=sydtxt),
         disable_web_page_preview=True,
         reply_markup=reply_markup
     )
