@@ -12,7 +12,7 @@ from pyrogram.errors.exceptions.bad_request_400 import ChannelInvalid, ChatAdmin
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
  
 SYD_CHANNELS = ["Bot_Cracker", "Mod_Moviez_X", "MrSyD_Tg"]
-PREMIUM = [1733124290]
+PREMIUM = [1733124290, 8796242071]
 # async def not_subscribed(_, __, message):
     #for channel in SYD_CHANNELS:
        # try:
