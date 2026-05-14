@@ -114,7 +114,7 @@ async def back(bot, query):
 @Client.on_callback_query(filters.regex("topic"))
 async def topic_cb(bot, query):
     await query.message.reply_text(
-        "<b>PREMUIM 🌿:\n\n\n</b>
+        "<b>PREMUIM 🌿:\n\n\n</b>"
         "<b>◈ Tᴏ Sᴇɴᴅ Mᴇꜱꜱᴀɢᴇꜱ Tᴏ A Tᴏᴘɪᴄ, Sᴇɴᴅ Tʜᴇ Tᴏᴘɪᴄ Iᴅ Wʜᴇɴ Aꜱᴋᴇᴅ.\n\n</b>"
         "<b>◈ Yᴏᴜ Cᴀɴ Gᴇᴛ Tʜᴇ Tᴏᴘɪᴄ Iᴅ Bʏ Fᴏʀᴡᴀʀᴅɪɴɢ A Mᴇꜱꜱᴀɢᴇ Fʀᴏᴍ Tʜᴇ Tᴏᴘɪᴄ.\n\n</b>"
         "<b>◈ Tʜᴇ Bᴏᴛ Wɪʟʟ Sᴇɴᴅ Aʟʟ Mᴇꜱꜱᴀɢᴇꜱ Iɴꜱɪᴅᴇ Tʜᴀᴛ Sᴇʟᴇᴄᴛᴇᴅ Tᴏᴘɪᴄ.\n\n</b>"
