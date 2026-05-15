@@ -122,7 +122,7 @@ async def copy(bot, msg, m, sts):
    try:
      kwargs = {}
      if sts.get("reply_to") and sts.get("reply_to") != 0:
-        kwargs["reply_to_message_id"] = reply_id
+        kwargs["reply_to_message_id"] = sts.get("reply_to")
      if msg.get("media") and msg.get("caption"):
         await bot.send_cached_media(
               chat_id=sts.get('TO'),
